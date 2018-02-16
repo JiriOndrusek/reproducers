@@ -19,7 +19,7 @@ echo "Used tmp prefix: $TMP_PREFIX"
 PROFILE=$p
 echo "Used profile: $PROFILE"
 
-OFFSET=$0
+OFFSET=$o
 echo "Used offset: $OFFSET"
 echo -------------------------------
 
