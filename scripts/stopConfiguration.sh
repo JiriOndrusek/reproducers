@@ -12,9 +12,6 @@ done
 NAME=$c
 echo "New configuration name: $NAME"
 
-PROFILE=$p
-echo "Used profile: $PROFILE"
-
 TMP_PREFIX=$tp
 echo "Used tmp prefix: $TMP_PREFIX"
 
@@ -22,18 +19,22 @@ echo "Used tmp prefix: $TMP_PREFIX"
 
 #!/bin/bash
 
-file="/tmp/$TMP_PREFIX_save_pid.txt"
+file="/tmp/${TMP_PREFIX}_running_${NAME}.txt"
 #if process is running, exit
 if [ -f "$file" ]
 then
-	echo "$file found."
-	echo "EXITTING"
-	exit 1
+	echo "killing ..."
 else
-	echo "starting ....."
+	echo "$file not found."
+	echo "CAN NOT STOP."
+	exit 1
 fi
 
-nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME 2>&1 &
-echo $! > $file
+parent_process=`cat $file`
+#parent_process=$value
 
-tail $EAP_HOME/standalone/log/server.log -f
+pkill -9 -P $parent_process
+kill -9 $parent_process
+
+rm $file
+echo STOPPED

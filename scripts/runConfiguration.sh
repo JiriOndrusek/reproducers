@@ -1,19 +1,47 @@
 #!/bin/bash
+while [ $# -gt 0 ]; do
 
-NAME=$1
-DEBUG_PORT=$2
-PROFILE=$3
+   if [[ $1 == *"--"* ]]; then
+        v="${1/--/}"
+        declare $v="$2"
+   fi
 
-echo "Creating new configuration with name '$NAME' for folder '$EAP_HOME'"
+  shift
+done
 
-cp -R $EAP_HOME/standalone $EAP_HOME-$NAME/
+echo -------------------------------
+NAME=$c
+echo "New configuration name: $NAME"
 
-cp -R $EAP_HOME/bin/standalone.conf $EAP_HOME/bin/$NAME.conf
+TMP_PREFIX=$tp
+echo "Used tmp prefix: $TMP_PREFIX"
 
-cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME-$NAME/standalone/$PROFILE-for-$NAME.xml
+PROFILE=$p
+echo "Used profile: $PROFILE"
 
-cp -R $EAP_HOME/bin/standalone.sh $EAP_HOME/bin/$NAME.sh
+OFFSET=$0
+echo "Used offset: $OFFSET"
+echo -------------------------------
 
-sed -i '2i RUN_CONF="$EAP_HOME/bin/$NAME.conf"' $EAP_HOME/bin/$NAME.sh
+#$EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME
 
-sed -i '/$DEBUG_PORT/s/^#//g' $EAP_HOME/bin/$NAME.conf
+#!/bin/bash
+
+file="/tmp/${TMP_PREFIX}_running_${NAME}.txt"
+#if process is running, exit
+if [ -f "$file" ]
+then
+	echo "$file found."
+	echo "EXITTING"
+	exit 1
+else
+	echo "starting ....."
+fi
+
+declare -i off=$OFFSET
+nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off 2>&1 &
+echo $! > $file
+
+
+
+#$EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME

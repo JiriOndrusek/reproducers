@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/prepareConfiguration.sh lb 8787 standalone
+../../scripts/runConfiguration.sh --c lb --tp JBEAP-13375 --p standalone --o 0

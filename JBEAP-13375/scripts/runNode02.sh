@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/runConfiguration.sh --c node01 --p standalone-ha
+../../scripts/runConfiguration.sh --c node02 --p standalone-ha --o 200

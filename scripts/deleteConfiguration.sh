@@ -1,8 +1,18 @@
 #!/bin/bash
 
-NAME=$1
-PROFILE=$2
+while [ $# -gt 0 ]; do
 
-echo "Starting '$NAME' for server '$EAP_HOME'"
+   if [[ $1 == *"--"* ]]; then
+        v="${1/--/}"
+        declare $v="$2"
+   fi
 
-$EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$1.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME
+  shift
+done
+
+NAME=$c
+echo "Deleted configuration name: $NAME"
+
+rm -rf $EAP_HOME-$NAME
+rm -f $EAP_HOME/bin/$NAME.sh
+rm -f $EAP_HOME/bin/$NAME.conf

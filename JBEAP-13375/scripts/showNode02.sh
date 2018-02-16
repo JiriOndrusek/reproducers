@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/showConfiguration.sh --c node01
+../../scripts/showConfiguration.sh --c node02

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/runConfiguration.sh --c lb --p standalone
+../../scripts/stopConfiguration.sh --c lb --tp JBEAP-13375

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/stopConfiguration.sh --c lb --tp JBEAP-13375
+../../scripts/showConfiguration.sh --c lb
