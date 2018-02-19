@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class Client {
 
-    public final static int TIMES = 10;
+    public final static int TIMES = 2;
 
 
     public static void main(String[] args) throws NamingException {
