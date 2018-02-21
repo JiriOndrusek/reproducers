@@ -9,11 +9,11 @@ import java.util.Properties;
 
 public class Client {
 
-    public final static int TIMES = 2;
+    public final static int TIMES = 1;
 
 
     public static void main(String[] args) throws NamingException {
-        final String ADDR = System.getProperty("remote.server.address", "127.0.0.1:8180");
+        final String ADDR = System.getProperty("remote.server.address", "127.0.0.1:8080");
         final String PATH = System.getProperty("remote.endpoint.path", "/wildfly-services");
         final String URL = "http://" + ADDR + PATH;
         InitialContext iniCtx = new InitialContext(getCtxProperties(URL));
@@ -33,14 +33,14 @@ public class Client {
         Properties props = new Properties();
         props.put(Context.INITIAL_CONTEXT_FACTORY, "org.wildfly.naming.client.WildFlyInitialContextFactory");
 //        props.put(Context.PROVIDER_URL, URL);
-        props.put(Context.SECURITY_CREDENTIALS,"w3lcome!");
+//        props.put(Context.SECURITY_CREDENTIALS,"joeIsAwesome2013!");
 
 ////        jndiProperties.put("remote.connection.main.port", Integer.toString(8180));
 
-        props.put(Context.SECURITY_PRINCIPAL, "user");
+//        props.put(Context.SECURITY_PRINCIPAL, "joe");
 //        props.put("remote.clusters", "ejb");
 
-//        props.put("remote.connection.main.port", 8180);
+        props.put("remote.connection.main.port", 8180);
 //        props.put("remote.connection.main.host", "127.0.0.1");
 //                props.put(Context.PROVIDER_URL,"http://localhost:8180");
                 props.put(Context.PROVIDER_URL, URL);

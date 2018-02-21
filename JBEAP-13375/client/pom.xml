@@ -70,13 +70,6 @@
                     </arguments>
                     <!--<detail>true</detail>-->
                 </configuration>
-                <!--<executions>
-                    <execution>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
             </plugin>
 
             <plugin>

@@ -35,9 +35,7 @@ echo -------------------------------
 #$EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME
 declare -i off=$OFFSET
 
-if [ $BACKGROUND == 'true' ]
-then
-    file="/tmp/${TMP_PREFIX}_running_${NAME}.txt"
+file="/tmp/${TMP_PREFIX}_running_${NAME}.txt"
     #if process is running, exit
     if [ -f "$file" ]
     then
@@ -48,8 +46,15 @@ then
         echo "starting ....."
     fi
 
+
+if [ $BACKGROUND == 'true' ]
+then
     nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djboss.node.name=$NAME 2>&1 &
     echo $! > $file
 else
+    echo 'cmd' > $file
     $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djboss.node.name=$NAME
+
+    rm $file
+    echo STOPPED
 fi
