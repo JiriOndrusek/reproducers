@@ -26,9 +26,14 @@
     <modules>
         <module>ejb_helloWorld</module>
         <module>JBEAP-13375</module>
+        <module>JBEAP-13613</module>
     </modules>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+
         <version.server.bom>7.1.0.GA</version.server.bom>
 
         <version.jboss.spec.javaee.7.0>1.1.0.Final-redhat-3</version.jboss.spec.javaee.7.0>
