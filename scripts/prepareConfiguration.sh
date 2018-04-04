@@ -3,6 +3,7 @@
 #--c configuration name
 #--d_p debug port
 #--p profile
+#--j_o java options to append
 
 # https://unix.stackexchange.com/questions/129391/passing-named-arguments-to-shell-scripts
 while [ $# -gt 0 ]; do

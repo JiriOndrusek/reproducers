@@ -1,0 +1,38 @@
+{
+  "servers": [
+    {
+      "name": "node01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full-ha",
+        "debugPort": 8787,
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
+    {
+      "name": "node02",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-full-ha",
+        "debugPort": 8888,
+        "javaOpts": ""
+      },
+      "deploy":["../server/target/JBEAP-13613-server-1.0.0-SNAPSHOT.jar"]
+    },
+    {
+      "name": "node03",
+      "configuration": {
+        "offset": 200,
+        "profile": "standalone-full-ha",
+        "debugPort": 8989,
+        "javaOpts": "JAVA_OPTS=$JAVA_OPTS -Djboss.modules.system.pkgs=org.jboss.byteman -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/work/2018-03-05_ASSIGN_JBEAP-13613_producer-window-size-property-is-ignored/work/reproducers/JBEAP-13613/scripts2/node1.btm,sys"
+      },
+      "deploy":["../server/target/JBEAP-13613-server-1.0.0-SNAPSHOT.jar"]
+    }
+   ],
+  "tmpPrefix": "JBEAP-13613"
+}
+
+
+

@@ -17,6 +17,7 @@
 package jondruse;
 
 import javax.ejb.ActivationConfigProperty;
+import javax.ejb.EJB;
 import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -38,20 +39,35 @@ public class HelloWorldQueueMDB implements MessageListener {
 
     private static final Logger LOGGER = Logger.getLogger(HelloWorldQueueMDB.class.toString());
 
+    @EJB
+    StatefullBean statefullBean;
     /**
      * @see MessageListener#onMessage(Message)
      */
     public void onMessage(Message rcvMessage) {
         TextMessage msg = null;
-        try {
-            if (rcvMessage instanceof TextMessage) {
-                msg = (TextMessage) rcvMessage;
-                LOGGER.info("Received Message from queue: " + msg.getText());
-            } else {
-                LOGGER.warning("Message of wrong type: " + rcvMessage.getClass().getName());
-            }
-        } catch (JMSException e) {
-            throw new RuntimeException(e);
-        }
+        String text = null;
+try {
+    if (rcvMessage instanceof TextMessage) {
+        msg = (TextMessage) rcvMessage;
+        text = msg.getText();
+        LOGGER.info("Received Message: --------------------------" + text + "-----------------------------------");
+//        count = statefullBean.add();
+    } //else {
+//                LOGGER.warning("Message of wrong type: " + rcvMessage.getClass().getName());
+//            }
+
+    try {
+        long millis = Long.parseLong(System.getProperty("JBEAP-13613-sleep", "10000"));
+
+        Thread.sleep((long)(millis/**Math.random()*/));
+    } catch (InterruptedException e) {
+        e.printStackTrace();
     }
+    LOGGER.info("------------- wake up "+text);
+
+} catch( JMSException e) {
+    e.printStackTrace();
+}
+        }
 }

@@ -1,0 +1,7 @@
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+jms-queue add --queue-address=testQueue --entries=queue/test,java:jboss/exported/jms/queue/test
+
+/system-property=JBEAP-13613-sleep:add
+/system-property=JBEAP-13613-sleep:write-attribute(name=value, value=10)
+:reload
