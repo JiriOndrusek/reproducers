@@ -1,0 +1,8 @@
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave1:add(host=localhost, port=8180)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave2:add(host=localhost, port=8280)
+/core-service=management/security-realm=ejb-security-realm:add()
+/core-service=management/security-realm=ejb-security-realm/server-identity=secret:add(value="YWRtaW4xMjMr")
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1:add(outbound-socket-binding-ref=remote-ejb-slave1, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2:add(outbound-socket-binding-ref=remote-ejb-slave2, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+:reload
