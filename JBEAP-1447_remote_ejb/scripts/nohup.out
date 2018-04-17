@@ -3421,4 +3421,630 @@ Listening for transport dt_socket at address: 8989
 [0m[0m12:56:43,621 INFO  [stdout] (default task-35) WhoAmIBean.whoAmI called on server with port-offset 200
 [0m[0m12:57:13,232 INFO  [stdout] (default task-39) WhoAmIBean.whoAmI called on server with port-offset 100
 [0m[0m12:57:17,279 INFO  [stdout] (default task-39) WhoAmIBean.whoAmI called on server with port-offset 200
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node01/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node02/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8789,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node03/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8790,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node05/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8791,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8789
+Listening for transport dt_socket at address: 8888
+Listening for transport dt_socket at address: 8790
+Listening for transport dt_socket at address: 8791
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node06/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8792,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8792
+[0m13:11:35,556 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:35,653 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:35,719 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:35,739 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:35,841 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:35,895 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:11:36,394 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,464 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,562 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,589 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,597 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:36,667 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,692 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:36,767 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:11:36,815 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:36,865 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:36,888 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:37,052 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:11:41,183 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:41,323 INFO  [org.wildfly.security] (ServerService Thread Pool -- 5) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:41,451 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:41,863 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:41,891 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:41,925 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:11:42,126 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:42,190 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:11:42,260 INFO  [org.wildfly.security] (ServerService Thread Pool -- 22) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:42,276 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m13:11:42,351 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:11:42,394 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[0m13:11:42,411 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:42,206 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[0m13:11:42,240 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+[0m[33m13:11:42,355 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:11:42,431 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:11:42,533 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+[0m[0m13:11:42,618 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:11:42,682 INFO  [org.jboss.as.security] (MSC service thread 1-3) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[0m13:11:42,723 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:11:42,764 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.5.Final-redhat-1
+[0m[0m13:11:42,899 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:11:43,140 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,243 INFO  [org.wildfly.security] (ServerService Thread Pool -- 3) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:43,273 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 20) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,315 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:11:43,401 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:11:43,467 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:43,506 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,518 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,582 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:43,626 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:11:43,635 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,639 INFO  [org.wildfly.security] (ServerService Thread Pool -- 25) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:43,814 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:43,816 INFO  [org.wildfly.security] (ServerService Thread Pool -- 6) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:43,875 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[0m13:11:43,875 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:11:43,934 INFO  [org.wildfly.security] (ServerService Thread Pool -- 32) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:11:43,998 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:44,013 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:11:44,301 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0012: Started server default-server.
+[0m[0m13:11:44,267 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:11:44,324 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+[0m[0m13:11:44,595 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:44,649 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:44,671 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:44,710 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8380
+[0m[0m13:11:44,790 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:11:44,799 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:44,846 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:11:44,884 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:11:45,311 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:45,339 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:11:45,356 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:11:45,356 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:45,423 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:11:45,458 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:11:45,541 INFO  [org.jboss.as.patching] (MSC service thread 1-3) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[0m13:11:45,678 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[33m13:11:45,709 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-5) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[33m13:11:45,738 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-4) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m13:11:45,872 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/deployments
+[0m[0m13:11:46,283 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8743
+[0m[0m13:11:46,570 INFO  [org.jboss.ws.common.management] (MSC service thread 1-7) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[0m13:11:47,076 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:11:47,095 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10290/management
+[0m[0m13:11:47,096 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10290
+[0m[0m13:11:47,096 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 12318ms - Started 293 of 554 services (347 services are lazy, passive or on-demand)
+[0m[0m13:12:13,995 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,001 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,002 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,048 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,050 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,050 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,145 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:12:14,151 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0008: Undertow HTTPS listener https suspending
+[0m[0m13:12:14,151 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0019: Host default-host stopping
+[0m[0m13:12:14,156 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8743
+[0m[0m13:12:14,158 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTP listener default suspending
+[0m[0m13:12:14,159 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8380
+[0m[0m13:12:14,160 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0004: Undertow 1.4.18.SP5-redhat-1 stopping
+[0m[0m13:12:14,168 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = h2
+[0m[0m13:12:14,193 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+[0m[0m13:12:14,202 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: WildFly Core 3.0.13.Final-redhat-1 "Kenny" stopped in 89ms
+[0m[0m13:12:14,203 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:12:14,331 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,390 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,391 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,391 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,391 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,392 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,392 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,475 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:12:14,491 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:12:14,522 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:12:14,533 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:12:14,535 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[0m13:12:14,534 INFO  [org.jboss.as.ejb3] (MSC service thread 1-5) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:12:14,536 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[0m13:12:14,546 INFO  [org.jboss.as.connector] (MSC service thread 1-8) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:12:14,547 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:12:14,535 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:12:14,624 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m13:12:14,627 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+[0m[0m13:12:14,628 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:12:14,695 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:12:14,695 INFO  [org.jboss.as.security] (MSC service thread 1-8) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[33m13:12:14,695 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:12:14,711 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:12:14,717 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:12:14,710 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[0m13:12:14,829 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0012: Started server default-server.
+[0m[0m13:12:14,830 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+[0m[0m13:12:14,831 INFO  [org.jboss.as.patching] (MSC service thread 1-6) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[33m13:12:14,833 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-6) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m13:12:14,860 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:12:14,860 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8380
+[0m[0m13:12:14,863 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8743
+[0m[33m13:12:14,868 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-4) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[0m13:12:14,868 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/deployments
+[0m[0m13:12:14,868 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[0m13:12:14,875 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:12:15,036 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:12:15,039 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10290/management
+[0m[0m13:12:15,040 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10290
+[0m[0m13:12:15,054 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 835ms - Started 299 of 560 services (350 services are lazy, passive or on-demand)
+[0m[0m13:12:15,065 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/data/content/8f/2ec3524d41b8dad0a108a46286e80a06a355ea/content
+[0m[0m13:12:15,142 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "client-side.war" (runtime-name: "client-side.war")
+[0m[0m13:12:16,091 INFO  [org.jboss.weld.deployer] (MSC service thread 1-7) WFLYWELD0003: Processing weld deployment client-side.war
+[0m[0m13:12:16,162 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-7) HV000001: Hibernate Validator 5.3.5.Final-redhat-2
+[0m[0m13:12:16,272 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'WhoAmIBean' in deployment unit 'deployment "client-side.war"' are as follows:
+
+	java:global/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:app/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:module/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:jboss/exported/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:global/client-side/WhoAmIBean
+	java:app/client-side/WhoAmIBean
+	java:module/WhoAmIBean
+
+[0m[0m13:12:16,272 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-7) WFLYEJB0473: JNDI bindings for session bean named 'Bean' in deployment unit 'deployment "client-side.war"' are as follows:
+
+	java:global/client-side/Bean!jondruse.BeanRemote
+	java:app/client-side/Bean!jondruse.BeanRemote
+	java:module/Bean!jondruse.BeanRemote
+	java:global/client-side/Bean
+	java:app/client-side/Bean
+	java:module/Bean
+
+[0m[0m13:12:16,539 INFO  [org.jboss.weld.Version] (MSC service thread 1-7) WELD-000900: 2.4.7 (redhat)
+[0m[0m13:12:16,748 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-3) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.10.Final-redhat-1
+[0m[0m13:12:17,182 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started client-mappings cache from ejb container
+[0m[0m13:12:18,094 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 28) WFLYUT0021: Registered web context: '/client-side' for server 'default-server'
+[0m[0m13:12:18,118 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "client-side.war" (runtime-name : "client-side.war")
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node01/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node02/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8789,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node03/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8790,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8789
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node06/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8792,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node05/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8791,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8888
+Listening for transport dt_socket at address: 8790
+Listening for transport dt_socket at address: 8792
+Listening for transport dt_socket at address: 8791
+[0m13:15:55,864 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:55,988 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:56,027 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:56,035 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:56,052 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:56,164 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m13:15:56,809 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:56,851 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:56,855 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:56,869 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:56,964 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:57,090 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:15:57,098 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m13:15:57,140 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:15:57,168 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:15:57,209 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:15:57,258 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:15:57,424 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:16:02,458 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:02,566 INFO  [org.wildfly.security] (ServerService Thread Pool -- 13) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:02,766 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:02,879 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:02,962 INFO  [org.wildfly.security] (ServerService Thread Pool -- 19) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:03,035 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:03,064 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:03,088 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:03,132 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:03,193 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:03,434 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:03,466 INFO  [org.wildfly.security] (ServerService Thread Pool -- 13) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:03,485 INFO  [org.jboss.remoting] (MSC service thread 1-8) JBoss Remoting version 5.0.5.Final-redhat-1
+[0m[0m13:16:03,527 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:16:03,588 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:03,588 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:03,631 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m13:16:03,539 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[0m13:16:03,634 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+[0m[0m13:16:03,678 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:03,713 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:16:03,797 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:03,829 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[33m13:16:03,716 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:16:03,851 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[0m13:16:03,897 INFO  [org.wildfly.security] (ServerService Thread Pool -- 17) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:03,908 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:16:03,921 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:03,979 INFO  [org.wildfly.security] (ServerService Thread Pool -- 9) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:03,932 INFO  [org.jboss.as.security] (MSC service thread 1-8) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[0m13:16:04,010 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:16:03,983 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:16:04,029 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:16:04,074 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:16:04,086 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:04,095 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 10) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:04,091 INFO  [org.jboss.as.naming] (MSC service thread 1-8) WFLYNAM0003: Starting Naming Service
+[0m[0m13:16:04,143 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:16:04,168 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:16:04,277 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m13:16:04,395 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[0m13:16:04,099 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[0m13:16:04,404 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:16:04,229 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+[0m[33m13:16:04,354 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:16:04,545 INFO  [org.jboss.as.naming] (MSC service thread 1-4) WFLYNAM0003: Starting Naming Service
+[0m[0m13:16:04,560 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:04,565 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:16:04,590 INFO  [org.wildfly.security] (ServerService Thread Pool -- 25) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m13:16:04,566 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 5.0.5.Final-redhat-1
+[0m[0m13:16:04,584 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:16:04,617 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:16:04,763 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[0m13:16:04,775 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:16:04,780 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:16:04,787 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:04,832 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:04,824 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:16:04,909 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[0m13:16:04,909 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:16:04,967 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:05,149 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:05,209 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0012: Started server default-server.
+[0m[0m13:16:05,213 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+[0m[0m13:16:05,173 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:16:05,321 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:05,383 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:05,458 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:05,465 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:05,552 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:05,592 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:16:05,753 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8380
+[0m[0m13:16:05,789 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m13:16:05,829 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:16:05,851 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:16:05,830 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[0m13:16:05,938 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:16:05,595 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[33m13:16:05,827 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:16:05,962 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+[0m[0m13:16:05,963 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[0m13:16:05,965 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+[0m[0m13:16:05,959 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+[0m[0m13:16:06,083 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[0m13:16:06,101 INFO  [org.jboss.as.naming] (MSC service thread 1-2) WFLYNAM0003: Starting Naming Service
+[0m[0m13:16:06,152 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:06,209 INFO  [org.jboss.remoting] (MSC service thread 1-4) JBoss Remoting version 5.0.5.Final-redhat-1
+[0m[0m13:16:06,224 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:16:06,266 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:16:06,305 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:16:06,365 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:16:06,381 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.5.5.Final-redhat-1
+[0m[0m13:16:06,421 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8580
+[0m[0m13:16:06,496 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m13:16:06,460 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:16:06,459 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:16:07,047 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:16:07,044 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:16:07,116 INFO  [org.jboss.as.patching] (MSC service thread 1-6) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[33m13:16:07,265 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[33m13:16:07,305 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-3) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[0m13:16:07,394 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:16:07,439 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/deployments
+[0m[0m13:16:07,847 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0012: Started server default-server.
+[0m[0m13:16:08,043 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:16:08,205 INFO  [org.jboss.as.patching] (MSC service thread 1-7) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[0m13:16:07,917 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:16:08,245 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0018: Host default-host starting
+[0m[0m13:16:08,261 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:16:08,314 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8743
+[0m[33m13:16:08,322 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-3) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node06/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m13:16:08,262 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[33m13:16:08,429 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-1) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[0m13:16:08,445 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-7) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node06/deployments
+[0m[0m13:16:08,990 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[0m13:16:09,012 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8480
+[0m[0m13:16:09,029 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8943
+[0m[0m13:16:09,082 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:16:09,527 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:16:09,536 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10290/management
+[0m[0m13:16:09,551 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10290
+[0m[0m13:16:09,551 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 14512ms - Started 293 of 554 services (347 services are lazy, passive or on-demand)
+[0m[0m13:16:09,546 INFO  [org.jboss.as.patching] (MSC service thread 1-4) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[0m13:16:09,695 INFO  [org.jboss.ws.common.management] (MSC service thread 1-7) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[33m13:16:09,831 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-2) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node05/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[33m13:16:09,875 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-4) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[0m13:16:09,882 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node05/deployments
+[0m[0m13:16:10,021 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:16:10,124 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:16:10,127 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10490/management
+[0m[0m13:16:10,128 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10490
+[0m[0m13:16:10,128 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 15055ms - Started 293 of 554 services (347 services are lazy, passive or on-demand)
+[0m[0m13:16:10,616 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8843
+[0m[0m13:16:11,073 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[0m13:16:11,497 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:16:11,505 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10390/management
+[0m[0m13:16:11,506 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10390
+[0m[0m13:16:11,506 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 16354ms - Started 293 of 554 services (347 services are lazy, passive or on-demand)
+[0m[0m13:16:33,938 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:33,939 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:33,939 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 1) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:33,983 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:33,984 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:33,984 INFO  [org.jboss.as.controller.management-deprecated] (management-handler-thread - 3) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,073 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:16:34,083 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+[0m[0m13:16:34,083 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0008: Undertow HTTPS listener https suspending
+[0m[0m13:16:34,089 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0008: Undertow HTTP listener default suspending
+[0m[0m13:16:34,099 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = h2
+[0m[0m13:16:34,123 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8380
+[0m[0m13:16:34,097 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8743
+[0m[0m13:16:34,129 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 1.4.18.SP5-redhat-1 stopping
+[0m[0m13:16:34,152 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) WFLYMAIL0002: Unbound mail session [java:jboss/mail/Default]
+[0m[0m13:16:34,166 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0050: WildFly Core 3.0.13.Final-redhat-1 "Kenny" stopped in 127ms
+[0m[0m13:16:34,167 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: WildFly Core 3.0.13.Final-redhat-1 "Kenny" starting
+[0m[0m13:16:34,348 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,440 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,442 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,442 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,443 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'username' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,443 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,443 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'protocol' in the resource at address '/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,518 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 29) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m13:16:34,538 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m13:16:34,642 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+[0m[0m13:16:34,644 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+[0m[0m13:16:34,645 INFO  [org.jboss.as.ejb3] (MSC service thread 1-8) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+[0m[0m13:16:34,659 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[0m13:16:34,673 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.0.25.Final-redhat-1
+[0m[0m13:16:34,684 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.8.Final-redhat-1)
+[0m[0m13:16:34,685 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m13:16:34,667 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m13:16:34,830 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+[0m[33m13:16:34,832 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m13:16:34,833 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0003: Undertow 1.4.18.SP5-redhat-1 starting
+[0m[0m13:16:34,834 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m13:16:34,833 INFO  [org.jboss.as.naming] (MSC service thread 1-3) WFLYNAM0003: Starting Naming Service
+[0m[0m13:16:34,838 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path '/home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m13:16:34,850 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+[0m[0m13:16:34,851 INFO  [org.jboss.as.security] (MSC service thread 1-4) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-1
+[0m[0m13:16:34,850 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+[0m[33m13:16:34,947 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m13:16:34,942 INFO  [org.jboss.as.patching] (MSC service thread 1-3) WFLYPAT0050: WildFly cumulative patch ID is: base, one-off patches include: none
+[0m[0m13:16:35,011 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+[0m[0m13:16:35,013 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0018: Host default-host starting
+[0m[0m13:16:35,015 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m13:16:35,015 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) WFLYDS0013: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/deployments
+[0m[33m13:16:35,015 WARN  [org.jboss.as.domain.http.api.undertow] (MSC service thread 1-4) WFLYDMHTTP0003: Unable to load console module for slot main, disabling console
+[0m[0m13:16:35,022 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8380
+[0m[0m13:16:35,023 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8743
+[0m[0m13:16:35,031 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBossWS 5.1.10.Final-redhat-1 (Apache CXF 3.1.13.redhat-1) 
+[0m[0m13:16:35,035 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m13:16:35,076 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node04/data/content/1c/51745053014b155dc9b4c06959b9c0fbd68304/content
+[0m[0m13:16:35,276 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "client-side.war" (runtime-name: "client-side.war")
+[0m[0m13:16:35,280 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m13:16:36,147 INFO  [org.jboss.weld.deployer] (MSC service thread 1-3) WFLYWELD0003: Processing weld deployment client-side.war
+[0m[0m13:16:36,249 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-3) HV000001: Hibernate Validator 5.3.5.Final-redhat-2
+[0m[0m13:16:36,386 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-3) WFLYEJB0473: JNDI bindings for session bean named 'WhoAmIBean' in deployment unit 'deployment "client-side.war"' are as follows:
+
+	java:global/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:app/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:module/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:jboss/exported/client-side/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:global/client-side/WhoAmIBean
+	java:app/client-side/WhoAmIBean
+	java:module/WhoAmIBean
+
+[0m[0m13:16:36,386 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-3) WFLYEJB0473: JNDI bindings for session bean named 'Bean' in deployment unit 'deployment "client-side.war"' are as follows:
+
+	java:global/client-side/Bean!jondruse.BeanRemote
+	java:app/client-side/Bean!jondruse.BeanRemote
+	java:module/Bean!jondruse.BeanRemote
+	java:global/client-side/Bean
+	java:app/client-side/Bean
+	java:module/Bean
+
+[0m[0m13:16:36,790 INFO  [org.jboss.weld.Version] (MSC service thread 1-6) WELD-000900: 2.4.7 (redhat)
+[0m[0m13:16:37,122 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-2) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.10.Final-redhat-1
+[0m[0m13:16:37,600 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started client-mappings cache from ejb container
+[0m[0m13:16:38,562 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 28) WFLYUT0021: Registered web context: '/client-side' for server 'default-server'
+[0m[0m13:16:38,568 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:10290/management
+[0m[0m13:16:38,568 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:10290
+[0m[0m13:16:38,569 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Core 3.0.13.Final-redhat-1 "Kenny" started in 4400ms - Started 485 of 709 services (356 services are lazy, passive or on-demand)
+[0m[0m13:16:38,586 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "client-side.war" (runtime-name : "client-side.war")
+[0m[0m13:16:39,986 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 2) WFLYDR0001: Content added at location /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node05/data/content/ba/4ff3c0dfabb648e86283d91eb4012fdde2aaeb/content
+[0m[0m13:16:40,013 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "server-side-slave1.jar" (runtime-name: "server-side-slave1.jar")
+[0m[0m13:16:40,295 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0003: Processing weld deployment server-side-slave1.jar
+[0m[0m13:16:40,390 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-4) HV000001: Hibernate Validator 5.3.5.Final-redhat-2
+[0m[0m13:16:40,487 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-4) WFLYEJB0473: JNDI bindings for session bean named 'WhoAmIBean' in deployment unit 'deployment "server-side-slave1.jar"' are as follows:
+
+	java:global/server-side-slave1/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:app/server-side-slave1/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:module/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:jboss/exported/server-side-slave1/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:global/server-side-slave1/WhoAmIBean
+	java:app/server-side-slave1/WhoAmIBean
+	java:module/WhoAmIBean
+
+[0m[0m13:16:40,662 INFO  [org.jboss.weld.Version] (MSC service thread 1-1) WELD-000900: 2.4.7 (redhat)
+[0m[0m13:16:40,710 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-6) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.10.Final-redhat-1
+[0m[0m13:16:41,086 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 62) WFLYCLINF0002: Started client-mappings cache from ejb container
+[0m[0m13:16:41,666 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "server-side-slave1.jar" (runtime-name : "server-side-slave1.jar")
+[0m[0m13:16:43,545 INFO  [org.jboss.as.repository] (DeploymentScanner-threads - 1) WFLYDR0001: Content added at location /home/jondruse/work/2018-04-13_JBEAP-1447_remote_ejb/7.1/02-node06/data/content/ba/4ff3c0dfabb648e86283d91eb4012fdde2aaeb/content
+[0m[0m13:16:43,564 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "server-side-slave2.jar" (runtime-name: "server-side-slave2.jar")
+[0m[0m13:16:43,806 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment server-side-slave2.jar
+[0m[0m13:16:43,872 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-2) HV000001: Hibernate Validator 5.3.5.Final-redhat-2
+[0m[0m13:16:43,951 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-2) WFLYEJB0473: JNDI bindings for session bean named 'WhoAmIBean' in deployment unit 'deployment "server-side-slave2.jar"' are as follows:
+
+	java:global/server-side-slave2/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:app/server-side-slave2/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:module/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:jboss/exported/server-side-slave2/WhoAmIBean!example.ejb.WhoAmIBeanRemote
+	java:global/server-side-slave2/WhoAmIBean
+	java:app/server-side-slave2/WhoAmIBean
+	java:module/WhoAmIBean
+
+[0m[0m13:16:44,133 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 2.4.7 (redhat)
+[0m[0m13:16:44,194 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-6) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.10.Final-redhat-1
+[0m[0m13:16:44,567 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started client-mappings cache from ejb container
+[0m[0m13:16:45,061 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0010: Deployed "server-side-slave2.jar" (runtime-name : "server-side-slave2.jar")
+[0m[0m13:17:18,586 INFO  [org.wildfly.naming] (default task-1) WildFly Naming version 1.0.7.Final-redhat-1
+[0m[0m13:17:18,621 INFO  [org.jboss.ejb.client] (default task-1) JBoss EJB Client version 4.0.10.Final-redhat-1
+[0m[0m13:17:19,381 INFO  [stdout] (default task-6) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:17:19,638 INFO  [stdout] (default task-6) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:17:21,892 INFO  [stdout] (default task-11) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:17:21,909 INFO  [stdout] (default task-11) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:17:23,131 INFO  [stdout] (default task-15) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:17:23,150 INFO  [stdout] (default task-15) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:17:23,978 INFO  [stdout] (default task-19) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:17:24,000 INFO  [stdout] (default task-19) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:17:24,564 INFO  [stdout] (default task-23) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:17:24,585 INFO  [stdout] (default task-23) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:18:13,403 INFO  [stdout] (default task-27) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:18:13,425 INFO  [stdout] (default task-27) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:18:13,999 INFO  [stdout] (default task-31) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:18:14,007 INFO  [stdout] (default task-31) WhoAmIBean.whoAmI called on server with port-offset 500
+[0m[0m13:18:14,521 INFO  [stdout] (default task-35) WhoAmIBean.whoAmI called on server with port-offset 400
+[0m[0m13:18:14,533 INFO  [stdout] (default task-35) WhoAmIBean.whoAmI called on server with port-offset 500
 [0m

@@ -28,7 +28,6 @@
     <name>JBEAP-1447_remote_ejb</name>
 
     <modules>
-        <module>client</module>
         <module>servlet</module>
         <module>node</module>
     </modules>

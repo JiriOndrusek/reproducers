@@ -15,7 +15,7 @@
       "configuration": {
         "offset": 100,
         "profile": "standalone-full-ha",
-        "debugPort": 8888,
+        "debugPort": 8789,
         "javaOpts": ""
       },
       "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave1.jar"]
@@ -25,7 +25,37 @@
       "configuration": {
         "offset": 200,
         "profile": "standalone-full-ha",
-        "debugPort": 8989,
+        "debugPort": 8790,
+        "javaOpts": ""
+      },
+      "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave2.jar" ]
+    },
+    {
+      "name": "node04",
+      "configuration": {
+        "offset": 300,
+        "profile": "standalone",
+        "debugPort": 8888,
+        "javaOpts": ""
+      },
+      "deploy":["../servlet/target/JBEAP-1447_remote_ejb-servlet-1.0.0-SNAPSHOT.war", "client-side.war"]
+    },
+    {
+      "name": "node05",
+      "configuration": {
+        "offset": 400,
+        "profile": "standalone",
+        "debugPort": 8791,
+        "javaOpts": ""
+      },
+      "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave1.jar"]
+    },
+    {
+      "name": "node06",
+      "configuration": {
+        "offset": 500,
+        "profile": "standalone",
+        "debugPort": 8792,
         "javaOpts": ""
       },
       "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave2.jar" ]
