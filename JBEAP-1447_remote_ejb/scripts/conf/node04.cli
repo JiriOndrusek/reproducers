@@ -1,7 +1,0 @@
-/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave1:add(host=localhost, port=8480)
-/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave2:add(host=localhost, port=8580)
-/core-service=management/security-realm=ejb-security-realm:add()
-/core-service=management/security-realm=ejb-security-realm/server-identity=secret:add(value="YWRtaW4xMjMr")
-/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1:add(outbound-socket-binding-ref=remote-ejb-slave1, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
-/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2:add(outbound-socket-binding-ref=remote-ejb-slave2, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
-:reload

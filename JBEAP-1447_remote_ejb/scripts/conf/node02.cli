@@ -1,3 +1,0 @@
-/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
-:reload
-

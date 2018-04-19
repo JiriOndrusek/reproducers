@@ -1,8 +1,18 @@
-/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
 /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave1:add(host=localhost, port=8180)
 /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave2:add(host=localhost, port=8280)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave3:add(host=localhost, port=8380)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave4:add(host=localhost, port=8480)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb-slave5:add(host=localhost, port=8580)
 /core-service=management/security-realm=ejb-security-realm:add()
 /core-service=management/security-realm=ejb-security-realm/server-identity=secret:add(value="YWRtaW4xMjMr")
 /subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave1:add(outbound-socket-binding-ref=remote-ejb-slave1, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
 /subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave2:add(outbound-socket-binding-ref=remote-ejb-slave2, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave3:add(outbound-socket-binding-ref=remote-ejb-slave3, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave4:add(outbound-socket-binding-ref=remote-ejb-slave4, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection-slave5:add(outbound-socket-binding-ref=remote-ejb-slave5, protocol=http-remoting, security-realm=ejb-security-realm, username=admin)
+/subsystem=logging/logger=org.jboss.ejb.client:add
+/subsystem=logging/logger=org.jboss.remoting3:add
+/subsystem=logging/logger=org.jboss.ejb.client:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.remoting3:write-attribute(name="level", value="TRACE")
+
 :reload
