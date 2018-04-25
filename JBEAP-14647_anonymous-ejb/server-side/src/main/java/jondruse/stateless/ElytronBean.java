@@ -16,22 +16,20 @@
  */
 package jondruse.stateless;
 
-import javax.annotation.Resource;
-import javax.ejb.EJBContext;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
 /**
  */
 @Stateless
-@Remote(HiBeanRemote.class)
-public class HiBean implements HiBeanRemote {
-
-    @Resource
-    private EJBContext context;
+@Remote(ElytronBeanRemote.class)
+@RolesAllowed({ "guest" })
+//@SecurityDomain("other")
+public class ElytronBean implements ElytronBeanRemote {
 
     @Override
     public String sayHi() {
-        return "HI " + context.getCallerPrincipal().getName();
+        return "HI";
     }
 }

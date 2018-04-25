@@ -47,9 +47,6 @@ public class RemoteEJBClient {
         // Let's lookup the remote stateless calculator
         final HiBeanRemote hiBean = lookupRemoteStatelessHiBean();
         System.out.println("Obtained a remote stateless hi bean for invocation");
-        // invoke on the remote calculator
-        int a = 204;
-        int b = 340;
         System.out.println(hiBean.sayHi());
     }
 

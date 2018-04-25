@@ -16,22 +16,10 @@
  */
 package jondruse.stateless;
 
-import javax.annotation.Resource;
-import javax.ejb.EJBContext;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
-
 /**
  */
-@Stateless
-@Remote(HiBeanRemote.class)
-public class HiBean implements HiBeanRemote {
+public interface ElytronBeanRemote {
 
-    @Resource
-    private EJBContext context;
+    String sayHi();
 
-    @Override
-    public String sayHi() {
-        return "HI " + context.getCallerPrincipal().getName();
-    }
 }
