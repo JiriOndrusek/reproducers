@@ -1,0 +1,20 @@
+/core-service=management/security-realm=ApplicationRealm/authentication=local:remove
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_MECHANISMS:add
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_MECHANISMS:write-attribute(name="value", value="ANONYMOUS,PLAIN")
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_POLICY_NOANONYMOUS:add
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_POLICY_NOANONYMOUS:write-attribute(name="value", value="false")
+/subsystem=logging/logger=org.jboss.as.domain.management.security:add
+/subsystem=logging/logger=org.jboss.as.domain.management.security:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.sasl:add
+/subsystem=logging/logger=org.jboss.sasl:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.remoting3:add
+/subsystem=logging/logger=org.jboss.remoting3:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.remoting:add
+/subsystem=logging/logger=org.jboss.remoting:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.as.ejb3:add
+/subsystem=logging/logger=org.jboss.as.ejb3:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.security:add
+/subsystem=logging/logger=org.jboss.security:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.as.remoting:add
+/subsystem=logging/logger=org.jboss.as.remoting:write-attribute(name="level", value="TRACE")
+:reload

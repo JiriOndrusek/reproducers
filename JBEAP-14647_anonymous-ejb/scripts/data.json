@@ -1,0 +1,32 @@
+{
+  "servers": [
+    {
+      "name": "node01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "javaOpts": ""
+      },
+      "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
+
+    },
+    {
+      "name": "node02",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone",
+        "debugPort": 8888,
+        "javaOpts": ""
+      },
+      "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
+
+    }
+   ],
+  "tmpPrefix": "JBEAP-14647",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"]
+}
+
+
+

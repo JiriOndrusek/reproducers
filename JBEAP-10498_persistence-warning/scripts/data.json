@@ -1,0 +1,38 @@
+{
+  "servers": [
+    {
+      "name": "node01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full",
+        "debugPort": 8787,
+        "javaOpts": ""
+      },
+      "deploy":["../servlet/target/JBEAP-1447_remote_ejb-servlet-1.0.0-SNAPSHOT.war", "client-side.war"]
+    },
+    {
+      "name": "node02",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-full",
+        "debugPort": 8789,
+        "javaOpts": ""
+      },
+      "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave1.jar"]
+    },
+    {
+      "name": "node03",
+      "configuration": {
+        "offset": 200,
+        "profile": "standalone-full",
+        "debugPort": 8790,
+        "javaOpts": ""
+      },
+      "deploy":["../node/target/JBEAP-1447_remote_ejb-node-1.0.0-SNAPSHOT.jar", "server-side-slave2.jar" ]
+    }
+   ],
+  "tmpPrefix": "JBEAP-1447"
+}
+
+
+
