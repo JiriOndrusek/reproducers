@@ -1,15 +1,15 @@
 <configuration>
     <authentication-client xmlns="urn:elytron:1.0">
         <authentication-rules>
-            <rule use-configuration="default"/>
+            <rule use-configuration="authn" />
         </authentication-rules>
         <authentication-configurations>
-            <configuration name="default">
+            <configuration name="authn">
+                <!--<allow-all-sasl-mechanisms />-->
+                <!--<forbid-sasl-mechanisms names="JBOSS-LOCAL-USER"/>-->
+                <!--<use-service-loader-providers />-->
+                <!--<sasl-mechanism-selector selector="#ALL"/>-->
                 <sasl-mechanism-selector selector="#ALL"/>
-                <set-user-name name="user"/>
-                <credentials>
-                    <clear-password password="W3lcome!"/>
-                </credentials>
             </configuration>
         </authentication-configurations>
     </authentication-client>

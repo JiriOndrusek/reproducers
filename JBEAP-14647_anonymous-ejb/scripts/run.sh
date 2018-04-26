@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/01/run.sh
+../../scripts/01/run.sh $1

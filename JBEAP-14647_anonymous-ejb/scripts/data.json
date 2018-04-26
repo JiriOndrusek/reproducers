@@ -9,37 +9,6 @@
         "javaOpts": ""
       },
       "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
-    },
-    {
-      "name": "node02",
-      "configuration": {
-        "offset": 100,
-        "profile": "standalone",
-        "debugPort": 8888,
-        "javaOpts": ""
-      },
-      "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
-
-    },
-    {
-      "name": "node03",
-      "configuration": {
-        "offset": 200,
-        "profile": "standalone",
-        "debugPort": 8989,
-        "javaOpts": ""
-      },
-      "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
-    },
-    {
-      "name": "node04",
-      "configuration": {
-        "offset": 300,
-        "profile": "standalone",
-        "debugPort": 8789,
-        "javaOpts": ""
-      },
-      "deploy":["../server-side/target/JBEAP-14647_anonymous-ejb-server-side-1.0.0-SNAPSHOT.jar", "server.jar"]
     }
    ],
   "tmpPrefix": "JBEAP-14647",

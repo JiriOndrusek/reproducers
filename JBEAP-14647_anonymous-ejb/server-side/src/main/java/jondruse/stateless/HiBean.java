@@ -16,7 +16,10 @@
  */
 package jondruse.stateless;
 
+import org.jboss.annotation.security.SecurityDomain;
+
 import javax.annotation.Resource;
+import javax.annotation.security.PermitAll;
 import javax.ejb.EJBContext;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -25,6 +28,8 @@ import javax.ejb.Stateless;
  */
 @Stateless
 @Remote(HiBeanRemote.class)
+@PermitAll
+@SecurityDomain("other")
 public class HiBean implements HiBeanRemote {
 
     @Resource
