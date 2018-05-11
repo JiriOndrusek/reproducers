@@ -2,4 +2,4 @@
 
 
 
-../../scripts/01/prepare.sh
+../../scripts/02/prepare.sh

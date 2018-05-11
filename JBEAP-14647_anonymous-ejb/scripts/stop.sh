@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/01/stop.sh $1
+../../scripts/02/stop.sh $1

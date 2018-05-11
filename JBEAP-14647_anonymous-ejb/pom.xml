@@ -31,6 +31,7 @@
         <module>server-side</module>
         <module>client</module>
         <module>client7_0</module>
+        <module>client8180</module>
     </modules>
 
     <licenses>

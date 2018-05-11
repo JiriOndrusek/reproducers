@@ -11,4 +11,19 @@
 
 # add LoginPernission
 /subsystem=elytron/simple-permission-mapper=default-permission-mapper:list-remove(index=0, name=permission-mappings)
+
+/subsystem=logging/logger=org.jboss.as.domain.management.security:add
+/subsystem=logging/logger=org.jboss.as.domain.management.security:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.sasl:add
+/subsystem=logging/logger=org.jboss.sasl:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.remoting3:add
+/subsystem=logging/logger=org.jboss.remoting3:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.remoting:add
+/subsystem=logging/logger=org.jboss.remoting:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.as.ejb3:add
+/subsystem=logging/logger=org.jboss.as.ejb3:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.security:add
+/subsystem=logging/logger=org.jboss.security:write-attribute(name="level", value="TRACE")
+/subsystem=logging/logger=org.jboss.as.remoting:add
+/subsystem=logging/logger=org.jboss.as.remoting:write-attribute(name="level", value="TRACE")
 :reload

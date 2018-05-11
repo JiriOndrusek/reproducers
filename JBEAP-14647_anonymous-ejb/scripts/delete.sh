@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/01/delete.sh
+../../scripts/02/delete.sh
