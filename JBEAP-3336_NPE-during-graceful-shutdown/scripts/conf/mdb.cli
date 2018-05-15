@@ -1,0 +1,17 @@
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=messaging-remote:add(host="127.0.0.1", port="5445")
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=messaging-remote-backup:add(host="127.0.0.1", port="8180")
+/subsystem=messaging-activemq/server=default/http-connector=remote-http-connector:add(socket-binding="messaging-remote", endpoint="http-acceptor")
+/subsystem=messaging-activemq/server=default/http-connector=remote-http-connector-backup:add(socket-binding="messaging-remote-backup", endpoint="http-acceptor")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="connectors", value=[remote-http-connector,remote-http-connector-backup])
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="ha", value="true")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="reconnect-attempts", value="-1")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="retry-interval-multiplier", value="1.0")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="retry-interval", value="1000")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="block-on-acknowledge", value="true")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="user", value="user")
+/subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="password", value="W3lcome!")
+/subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
+jms-queue add --queue-address=inQueue --entries=queue/inQueue java:jboss/exported/jms/queue/inQueue
+jms-queue add --queue-address=outQueue --entries=queue/outQueue java:jboss/exported/jms/queue/outQueue
+:reload

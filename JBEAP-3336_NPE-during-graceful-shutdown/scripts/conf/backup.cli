@@ -1,0 +1,7 @@
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
+/subsystem=messaging-activemq/server=default/ha-policy=replication-slave:add
+jms-queue add --queue-address=inQueue --entries=queue/inQueue,java:jboss/exported/jms/queue/inQueue
+jms-queue add --queue-address=outQueue --entries=queue/outQueue,java:jboss/exported/jms/queue/outQueue
+/subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
+:reload

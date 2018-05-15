@@ -1,0 +1,33 @@
+{
+  "servers": [
+    {
+      "name": "live",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full-ha",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
+
+    {
+      "name": "mdb",
+      "configuration": {
+        "offset": 200,
+        "profile": "standalone-full-ha",
+        "debugPort": 8989,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":["../mdb/target/JBEAP-3336_NPE-during-graceful-shutdown-mdb-1.0.0-SNAPSHOT.jar", "mdb.jar"]
+    }
+   ],
+  "tmpPrefix": "JBEAP-3336",
+  "users": [["add-user.sh -a -u", "user", "W3lcome!", "guest"]],
+  "builds": ["..", "mvn clean install -Prh"]
+}
+
+
+
