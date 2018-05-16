@@ -11,7 +11,17 @@
       },
       "deploy":[]
     },
-
+    {
+      "name": "backup",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-full-ha",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
     {
       "name": "mdb",
       "configuration": {

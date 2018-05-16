@@ -33,7 +33,7 @@ public class Client {
     // Set up all the default values
     private static final String DEFAULT_MESSAGE = "Hello, World!";
     private static final String DEFAULT_CONNECTION_FACTORY = "jms/RemoteConnectionFactory";
-    private static final String DEFAULT_DESTINATION = "jms/queue/inQueue";
+    private static final String DEFAULT_DESTINATION = "jms/queue/InQueue";
 
     private static final String DEFAULT_USERNAME = "user";
     private static final String DEFAULT_PASSWORD = "W3lcome!";
@@ -41,7 +41,7 @@ public class Client {
     private static final String PROVIDER_URL = "http-remoting://127.0.0.1:8080";
 
 
-    private static final String DEFAULT_MESSAGE_COUNT = "1";
+    private static final String DEFAULT_MESSAGE_COUNT = "5000";
 
 
 
@@ -81,10 +81,83 @@ public class Client {
 
                 // Send the specified number of messages
                 for (int i = 0; i < count; i++) {
-                    String msg = i+ " ";
-                    for(int j =0 ; j<i; j++) {
-                        msg = msg +"x";
-                    }
+                    String msg = i+ "";
+//                    for(int j =0 ; j<i; j++) {
+//                        msg = msg +"x";
+//                    }
+//                    context.createProducer().send(destination, new byte[MESSAGE_SIZE]);
+//                    context.createProducer().send(destination, "" + (i+1) + "  zxzxzyuyuyuyuyuyuyuyuyxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzx ");
+//                    context.createProducer().send(destination, "" + (i+1) + "");
+                    context.createProducer().send(destination, msg);
+                }
+
+//                // Create the JMS consumer
+//                JMSConsumer consumer = context.createConsumer(destination);
+//                // Then receive the same number of messages that were sent
+//                for (int i = 0; i < count; i++) {
+//                    String text = consumer.receiveBody(String.class, 5000);
+//                    log.info("Received message with content " + text);
+//                }
+            }
+        } catch (Exception e) {
+            log.severe(e.getMessage());
+            e.printStackTrace();
+        } finally {
+            if (namingContext != null) {
+                try {
+                    namingContext.close();
+                } catch (NamingException e) {
+                    log.severe(e.getMessage());
+                }
+            }
+        }
+    }
+
+    public static void main2(String[] args) {
+
+        for(int i = 0;  i< 10000; i=i+1000) {
+            send(i, 1000);
+        }
+
+    }
+
+    public static void send(int from, int count) {
+
+        Context namingContext = null;
+        try {
+            String userName = System.getProperty("username", DEFAULT_USERNAME);
+            String password = System.getProperty("password", DEFAULT_PASSWORD);
+
+            // Set up the namingContext for the JNDI lookup
+            final Properties env = new Properties();
+            env.put(Context.INITIAL_CONTEXT_FACTORY, INITIAL_CONTEXT_FACTORY);
+            env.put(Context.PROVIDER_URL, System.getProperty(Context.PROVIDER_URL, PROVIDER_URL));
+            env.put(Context.SECURITY_PRINCIPAL, userName);
+            env.put(Context.SECURITY_CREDENTIALS, password);
+            namingContext = new InitialContext(env);
+
+            // Perform the JNDI lookups
+            String connectionFactoryString = System.getProperty("connection.factory", DEFAULT_CONNECTION_FACTORY);
+            log.info("Attempting to acquire connection factory \"" + connectionFactoryString + "\"");
+            ConnectionFactory connectionFactory = (ConnectionFactory) namingContext.lookup(connectionFactoryString);
+            log.info("Found connection factory \"" + connectionFactoryString + "\" in JNDI");
+
+            String destinationString = System.getProperty("destination", DEFAULT_DESTINATION);
+            log.info("Attempting to acquire destination \"" + destinationString + "\"");
+            Destination destination = (Destination) namingContext.lookup(destinationString);
+            log.info("Found destination \"" + destinationString + "\" in JNDI");
+
+
+            try (JMSContext context = connectionFactory.createContext(userName, password)) {
+                log.info("Sending " + count + " messages with content: " );
+
+
+                // Send the specified number of messages
+                for (int i = 0; i < count; i++) {
+                    String msg = (from+i)+ "";
+//                    for(int j =0 ; j<i; j++) {
+//                        msg = msg +"x";
+//                    }
 //                    context.createProducer().send(destination, new byte[MESSAGE_SIZE]);
 //                    context.createProducer().send(destination, "" + (i+1) + "  zxzxzyuyuyuyuyuyuyuyuyxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzxzx ");
 //                    context.createProducer().send(destination, "" + (i+1) + "");

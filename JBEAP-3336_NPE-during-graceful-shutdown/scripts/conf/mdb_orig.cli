@@ -1,5 +1,5 @@
 /subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit
-/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=messaging-remote:add(host="127.0.0.1", port="8080")
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=messaging-remote:add(host="127.0.0.1", port="5445")
 /socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=messaging-remote-backup:add(host="127.0.0.1", port="8180")
 /subsystem=messaging-activemq/server=default/http-connector=remote-http-connector:add(socket-binding="messaging-remote", endpoint="http-acceptor")
 /subsystem=messaging-activemq/server=default/http-connector=remote-http-connector-backup:add(socket-binding="messaging-remote-backup", endpoint="http-acceptor")
@@ -12,7 +12,6 @@
 /subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="user", value="user")
 /subsystem=messaging-activemq/server=default/pooled-connection-factory=activemq-ra:write-attribute(name="password", value="W3lcome!")
 /subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
-/subsystem=messaging-activemq/server=default/broadcast-group=bg-group1:remove()
-/subsystem=messaging-activemq/server=default/discovery-group=dg-group1:remove()
-/subsystem=messaging-activemq/server=default/cluster-connection=my-cluster:remove()
+jms-queue add --queue-address=inQueue --entries=queue/inQueue java:jboss/exported/jms/queue/inQueue
+jms-queue add --queue-address=outQueue --entries=queue/outQueue java:jboss/exported/jms/queue/outQueue
 :reload

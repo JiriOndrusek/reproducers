@@ -1,9 +1,6 @@
 
 package jondruse;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import javax.annotation.Resource;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
@@ -22,6 +19,8 @@ import javax.jms.Queue;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * A MdbWithRemoteOutQueueNoRebalancing used for lodh tests. Used in RemoteJcaTestCase.
@@ -64,18 +63,17 @@ public class Mdb implements MessageListener {
             long time = System.currentTimeMillis();
             int counter = 0;
             try {
-                counter = message.getIntProperty("count");
+                counter = Integer.parseInt(((TextMessage)message).getText());
             } catch (Exception e) {
                 log.log(Level.INFO, e.getMessage(), e);
             }
-            System.out.println("<><><><><><><> received");
             String messageInfo = message.getJMSMessageID() + ", count:" + counter;
 
             log.info(" Start of message:" + messageInfo);
 
             for (int i = 0; i < (5 + 5 * Math.random()); i++) {
                 try {
-                    Thread.sleep((int) (10 + 10 * Math.random()));
+                    Thread.sleep((int) (100 + 100 * Math.random()));
                 } catch (InterruptedException ex) {
                 }
             }
