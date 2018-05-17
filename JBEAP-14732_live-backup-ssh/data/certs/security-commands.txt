@@ -1,0 +1,4 @@
+keytool -genkey -alias server -keyalg RSA -keystore server.keystore -storepass Redhat1! -validity 365
+keytool -genkey -alias client -keystore client.keystore -storepass Redhat1! -validity 365 -keyalg RSA -keysize 2048 -storetype pkcs12 -dname "CN=Amine Belkoura, OU=Red Hat, O=Red Hat, L=Raleigh, ST=NC, C=US"
+keytool -exportcert -keystore client.keystore  -storetype pkcs12 -storepass Redhat1! -alias client -keypass Redhat1! -file client.cer
+keytool -import -file client.cer -alias client -keystore client.truststore

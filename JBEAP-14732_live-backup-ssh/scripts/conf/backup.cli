@@ -1,0 +1,56 @@
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
+/core-service=management/security-realm=CertificateRealm:add()
+/core-service=management/security-realm=CertificateRealm/server-identity=ssl:add(keystore-path="certs/client.keystore", keystore-password="Redhat1!", alias="client", keystore-relative-to="jboss.server.config.dir")
+
+/subsystem="jgroups"/stack="tcp":remove
+/subsystem="jgroups"/stack="tcp":add
+/subsystem="jgroups"/stack="tcp"/transport=TCP:add(type=TCP,socket-binding=jgroups-tcp)
+/subsystem="jgroups"/stack="tcp":add-protocol(type="TCPPING")
+/subsystem="jgroups"/stack="tcp"/protocol="TCPPING"/property="initial_hosts":add(value="127.0.0.1[7600],127.0.0.1[7700]")
+/subsystem="jgroups"/stack="tcp"/protocol="TCPPING"/property="port_range":add(value="0")
+/subsystem="jgroups"/stack="tcp"/protocol="TCPPING"/property="num_initial_members":add(value="2")
+
+/subsystem="jgroups"/stack="tcp":add-protocol(type="MERGE3")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="FD_SOCK")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="FD")
+/subsystem="jgroups"/stack="tcp"/protocol="FD":write-attribute(name=module,value=org.jgroups)
+/subsystem="jgroups"/stack="tcp":add-protocol(type="VERIFY_SUSPECT")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="pbcast.NAKACK2")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="UNICAST3")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="pbcast.STABLE")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="pbcast.GMS")
+/subsystem="jgroups"/stack="tcp"/protocol="pbcast.GMS"/property="join_timeout":add(value=200)
+/subsystem="jgroups"/stack="tcp":add-protocol(type="MFC")
+/subsystem="jgroups"/stack="tcp":add-protocol(type="FRAG2")
+/subsystem="jgroups":write-attribute(name=default-stack,value=tcp)
+
+/socket-binding-group=standard-sockets/socket-binding=messaging:add(port="5445")
+/socket-binding-group=standard-sockets/socket-binding=messaging-group:add(port="0", multicast-address="${jboss.messaging.group.address:231.7.7.7}",multicast-port="${jboss.messaging.group.port:9876}")
+
+reload
+
+/subsystem=undertow/server=default-server/https-listener=https-activemq:add(socket-binding=messaging,security-realm=CertificateRealm,enable-http2=true)
+
+reload
+
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+
+/subsystem=messaging-activemq/server=default/ha-policy=shared-store-slave:add(failover-on-server-shutdown="true")
+
+/subsystem=messaging-activemq/server=default/http-connector=http-connector:remove
+/subsystem=messaging-activemq/server=default/http-connector=http-connector:add(params={ssl-enabled=true,keyStorePath="${jboss.server.config.dir}/certs/client.keystore", keyStorePassword=Redhat1!, trustStorePath="${jboss.server.config.dir}/certs/client.truststore"}, socket-binding=messaging,endpoint=http-acceptor)
+
+/subsystem=messaging-activemq/server=default/http-connector=http-connector-throughput:remove
+/subsystem=messaging-activemq/server=default/http-connector=http-connector-throughput:add(params={batch-delay=50, ssl-enabled=true,keyStorePath="${jboss.server.config.dir}/certs/client.keystore", keyStorePassword=Redhat1!, trustStorePath="${jboss.server.config.dir}/certs/client.truststore"}, socket-binding=messaging,endpoint=http-acceptor)
+
+/subsystem=messaging-activemq/server=default/http-acceptor=http-acceptor:write-attribute(name=http-listener,value=https-activemq)
+/subsystem=messaging-activemq/server=default/http-acceptor=http-acceptor-throughput:write-attribute(name=http-listener,value=https-activemq)
+
+/subsystem=messaging-activemq/server=default/broadcast-group=bg-group1:remove
+/subsystem=messaging-activemq/server=default/broadcast-group=bg-group1:add(jgroups-channel=activemq-cluster,jgroups-stack=tcp,connectors=[http-connector])
+
+/subsystem=messaging-activemq/server=default/discovery-group=dg-group1:remove
+/subsystem=messaging-activemq/server=default/discovery-group=dg-group1:add(jgroups-channel=activemq-cluster,jgroups-stack=tcp)
+
+reload
+
