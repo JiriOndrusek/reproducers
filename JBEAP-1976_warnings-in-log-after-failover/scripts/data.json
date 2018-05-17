@@ -1,0 +1,32 @@
+{
+  "servers": [
+    {
+      "name": "live",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full-ha",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
+    {
+      "name": "backup",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-full-ha",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    }
+   ],
+  "tmpPrefix": "JBEAP-1976",
+  "users": [],
+  "builds": []
+}
+
+
+
