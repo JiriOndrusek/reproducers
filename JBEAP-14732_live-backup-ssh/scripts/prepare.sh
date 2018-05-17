@@ -8,4 +8,4 @@ echo
 
 
 
-../../scripts/03/prepare.sh
+../../scripts/04/prepare.sh

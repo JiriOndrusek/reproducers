@@ -8300,3 +8300,496 @@ Listening for transport dt_socket at address: 8888
 =========================================================================
 
 Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-backup/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Listening for transport dt_socket at address: 8888
+[0m14:32:52,043 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:32:52,057 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:32:52,460 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:32:52,499 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:32:52,646 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:32:52,689 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:32:55,647 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:32:55,742 INFO  [org.wildfly.security] (ServerService Thread Pool -- 2) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:32:55,788 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:32:55,877 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:32:56,002 INFO  [org.wildfly.security] (ServerService Thread Pool -- 2) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:32:56,129 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:32:56,258 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:32:56,302 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:32:56,350 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m14:32:56,492 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:32:56,576 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:32:56,619 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-backup/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Listening for transport dt_socket at address: 8888
+[0m14:34:27,988 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:34:27,999 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:34:28,548 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:34:28,570 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:34:28,729 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:34:28,730 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:34:31,364 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:34:31,375 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:34:31,410 INFO  [org.wildfly.security] (ServerService Thread Pool -- 3) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:34:31,473 INFO  [org.wildfly.security] (ServerService Thread Pool -- 28) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:34:31,504 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:34:31,545 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:34:31,816 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:34:31,841 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:34:31,858 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:34:31,878 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m14:34:31,887 INFO  [org.xnio] (MSC service thread 1-6) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:34:31,902 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-backup/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Listening for transport dt_socket at address: 8888
+[0m14:35:20,448 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:35:20,475 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:35:20,901 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:35:20,973 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:35:21,096 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:35:21,170 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:35:23,780 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:23,881 INFO  [org.wildfly.security] (ServerService Thread Pool -- 24) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:35:23,978 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:24,058 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:24,154 INFO  [org.wildfly.security] (ServerService Thread Pool -- 8) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:35:24,304 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:24,450 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:35:24,505 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:35:24,589 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m14:35:24,801 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:35:24,867 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:35:24,882 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-backup/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Listening for transport dt_socket at address: 8888
+[0m14:35:42,274 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:35:42,287 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:35:42,762 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:35:42,765 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:35:42,919 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:35:42,924 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:35:46,042 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:46,103 INFO  [org.wildfly.security] (ServerService Thread Pool -- 14) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:35:46,188 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:46,259 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:46,262 INFO  [org.wildfly.security] (ServerService Thread Pool -- 2) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:35:46,440 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:35:46,737 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:35:46,776 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:35:46,786 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m[0m14:35:46,844 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:35:46,938 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 5.0.5.Final-redhat-1
+[0m[0m14:35:46,972 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:35:47,042 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+[0m14:36:31,217 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:36:31,645 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:36:31,806 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:36:33,563 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:36:33,623 INFO  [org.wildfly.security] (ServerService Thread Pool -- 27) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:36:33,703 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 35) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:36:33,902 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:36:33,922 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:36:33,939 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+[0m14:36:54,936 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:36:55,264 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:36:55,384 INFO  [org.jboss.as] (MSC service thread 1-8) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:36:56,914 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:36:56,936 INFO  [org.wildfly.security] (ServerService Thread Pool -- 11) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:36:56,961 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 18) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:36:57,123 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:36:57,149 INFO  [org.xnio] (MSC service thread 1-8) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:36:57,156 INFO  [org.xnio.nio] (MSC service thread 1-8) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Unable to read the logging configuration from 'file:/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties' (java.io.FileNotFoundException: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration/logging.properties (No such file or directory))
+java.lang.IllegalStateException: WFLYSRV0121: Configuration directory does not exist: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02-live/configuration
+	at org.jboss.as.server.ServerEnvironment.<init>(ServerEnvironment.java:450)
+	at org.jboss.as.server.Main.determineEnvironment(Main.java:339)
+	at org.jboss.as.server.Main.main(Main.java:95)
+	at org.jboss.modules.Module.run(Module.java:344)
+	at org.jboss.modules.Main.main(Main.java:525)
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+[0m14:46:18,668 INFO  [org.jboss.modules] (main) JBoss Modules version 1.6.0.Final-redhat-1
+[0m[0m14:46:19,008 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.7.SP1-redhat-1
+[0m[0m14:46:19,125 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: JBoss EAP 7.1.3.Alpha1 (WildFly Core 3.0.13.Final-redhat-1) starting
+[0m[0m14:46:20,735 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:46:20,755 INFO  [org.wildfly.security] (ServerService Thread Pool -- 17) ELY00001: WildFly Elytron version 1.1.9.Final-redhat-1
+[0m[0m14:46:20,782 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 16) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m14:46:20,971 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m14:46:20,992 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.5.5.Final-redhat-1
+[0m[0m14:46:21,000 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.5.5.Final-redhat-1
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8888,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787
+Listening for transport dt_socket at address: 8888
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -verbose:gc -Xloggc:"/home/jondruse/work/2018-05-16_JBEAP-14732_live-backup-ssh/7.1/02/standalone/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Listening for transport dt_socket at address: 8787

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/03/show.sh $1
+../../scripts/04/show.sh $1
