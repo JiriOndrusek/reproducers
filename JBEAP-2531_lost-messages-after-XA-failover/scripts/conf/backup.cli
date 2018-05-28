@@ -1,0 +1,39 @@
+/subsystem=logging/console-handler=CONSOLE:add(level=INFO,formatter="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n")
+/subsystem=logging/root-logger=ROOT:add-handler(name=CONSOLE)
+
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
+
+/subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
+/subsystem=messaging-activemq/server=default:write-attribute(name="transaction-timeout", value="120000")
+
+/subsystem=messaging-activemq/server=default/path=bindings-directory:write-attribute(name=path,value="_journal")
+/subsystem=messaging-activemq/server=default/path=bindings-directory:write-attribute(name=relative-to,value="jboss.server.config.dir")
+
+/subsystem=messaging-activemq/server=default/path=journal-directory:write-attribute(name=path,value="_journal")
+/subsystem=messaging-activemq/server=default/path=journal-directory:write-attribute(name=relative-to,value="jboss.server.config.dir")
+
+/subsystem=messaging-activemq/server=default/path=paging-directory:write-attribute(name=path,value="_journal")
+/subsystem=messaging-activemq/server=default/path=paging-directory:write-attribute(name=relative-to,value="jboss.server.config.dir")
+
+/subsystem=messaging-activemq/server=default/path=large-messages-directory:write-attribute(name=path,value="_journal")
+/subsystem=messaging-activemq/server=default/path=large-messages-directory:write-attribute(name=relative-to,value="jboss.server.config.dir")
+
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=redelivery-delay, value="0")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=max-delivery-attempts, value="200")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=max-size-bytes, value="1048576")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=page-size-bytes, value="524288")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=address-full-policy, value=PAGE)
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=redistribution-delay, value=0)
+
+/subsystem=messaging-activemq/server=default/ha-policy=shared-store-slave:add(failover-on-server-shutdown="true", allow-failback="true", restart-backup="true")
+
+/subsystem=messaging-activemq/server=default/remote-acceptor=netty-acceptor:add(socket-binding=netty-binding)
+
+/subsystem=messaging-activemq/server=default/connection-factory=RemoteConnectionFactory:write-attribute(name=factory-type, value=XA_GENERIC)
+
+/subsystem=messaging-activemq/server=default:write-attribute(name=persistence-enabled, value=true)
+
+/socket-binding-group=standard-sockets/socket-binding=netty-binding:add(port=5445)
+
+reload

@@ -1,0 +1,32 @@
+{
+  "servers": [
+    {
+      "name": "live",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full-ha",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
+    {
+      "name": "backup",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-full-ha",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    }
+   ],
+  "tmpPrefix": "JBEAP-2531",
+  "users": [["add-user.sh -a -u", "user", "W3lcome!", "guest"]],
+  "builds": ["..", "mvn clean install -Prh"]
+}
+
+
+
