@@ -118,11 +118,9 @@ do
         temp="${rename%\"}"
         rename="${temp#\"}"
 
-
-
         echo
         echo "<><><><> deployintg $deploy on server $name <><><><><>"
-        cp $p/$deploy $EAP_HOME-$name/deployments/$rename
+        $EAP_HOME/bin/jboss-cli.sh -c --controller=127.0.0.1:$remotePort --command="deploy --force --runtime-name=$rename $p/$deploy"
     done
 
 

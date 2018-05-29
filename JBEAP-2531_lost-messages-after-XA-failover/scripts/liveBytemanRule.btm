@@ -1,0 +1,7 @@
+RULE trace Artemis Kill before commit is written to journal.
+CLASS org.apache.activemq.artemis.core.server.impl.ServerSessionImpl
+METHOD xaCommit
+IF true
+AT EXIT
+DO System.out.println("Byteman - Killing server!!!"); killJVM();
+ENDRULE

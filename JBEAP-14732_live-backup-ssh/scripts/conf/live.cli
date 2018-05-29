@@ -1,3 +1,6 @@
+/subsystem=logging/console-handler=CONSOLE:add(level=INFO,formatter="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n")
+/subsystem=logging/root-logger=ROOT:add-handler(name=CONSOLE)
+
 /socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
 /core-service=management/security-realm=CertificateRealm:add()
 /core-service=management/security-realm=CertificateRealm/server-identity=ssl:add(keystore-path="certs/client.keystore", keystore-password="Redhat1!", alias="client", keystore-relative-to="jboss.server.config.dir")

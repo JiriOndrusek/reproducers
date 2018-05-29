@@ -1,3 +1,3 @@
 #!/bin/bash
 
-../../scripts/05/prepare.sh
+../../scripts/06/prepare.sh

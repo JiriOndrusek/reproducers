@@ -46,7 +46,7 @@ public class Mdb implements MessageListener {
     private Queue queue = null;
     public static AtomicInteger numberOfProcessedMessages = new AtomicInteger();
 
-    @Resource(mappedName = "java:/JmsXA")
+    @Resource(mappedName = "java:jboss/exported/jms/RemoteConnectionFactory")
     private ConnectionFactory cf;
 
     @Resource

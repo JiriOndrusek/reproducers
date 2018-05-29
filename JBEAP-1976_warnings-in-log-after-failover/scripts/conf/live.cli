@@ -1,5 +1,3 @@
-/subsystem=logging/console-handler=CONSOLE:add(level=INFO,formatter="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n")
-/subsystem=logging/root-logger=ROOT:add-handler(name=CONSOLE)
 /subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
 /socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
 /subsystem=messaging-activemq/server=default/ha-policy=shared-store-master:add(failover-on-server-shutdown="true")

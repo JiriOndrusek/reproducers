@@ -7,7 +7,7 @@
         "profile": "standalone-full-ha",
         "debugPort": 8787,
         "debugSuspend": "n",
-        "javaOpts": ""
+        "javaOpts": "$JAVA_OPTS -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/git/projects/reproducers/JBEAP-2531_lost-messages-after-XA-failover/scripts/liveBytemanRule.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true"
       },
       "deploy":[]
     },

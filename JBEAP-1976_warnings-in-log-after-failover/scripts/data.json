@@ -21,6 +21,17 @@
         "javaOpts": ""
       },
       "deploy":[]
+    },
+    {
+      "name": "backup2",
+      "configuration": {
+        "offset": 200,
+        "profile": "standalone-full-ha",
+        "debugPort": 8989,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":[]
     }
    ],
   "tmpPrefix": "JBEAP-1976",
