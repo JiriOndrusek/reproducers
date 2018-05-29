@@ -72,13 +72,13 @@ sed -i "s/${DEBUG_PORT},server=y,suspend=y/${DEBUG_PORT},server=y,suspend=${DEBU
 
 if [ "$BACKGROUND" == "true" ]
 then
-    echo "nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &"
-    nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &
+    echo "nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &"
+    nohup $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &
     echo $! > $file
 else
     echo 'cmd' > $file
-    echo "$EAP_HOME/bin/$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
-    $EAP_HOME/bin/$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME
+    echo "$EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
+    $EAP_HOME/bin/$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME
 
     rm $file
     echo STOPPED

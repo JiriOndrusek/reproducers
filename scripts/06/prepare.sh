@@ -50,7 +50,12 @@ do
 
     javaOpts=${javaOpts:1:-1}
 
-    echo JAVA_OPTS=\"$javaOpts\" >> $EAP_HOME/bin/$name.conf
+    if [ "$javaOpts" != "" ]
+    then
+        echo JAVA_OPTS=\"$javaOpts\" >> $EAP_HOME/bin/$name.conf
+    fi
+
+
 done
 
 

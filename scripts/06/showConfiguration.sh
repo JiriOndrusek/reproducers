@@ -12,4 +12,4 @@ done
 NAME=$c
 echo "Configuration name: $NAME"
 
-tail $EAP_HOME-$NAME/log/server.log -f
+tail $EAP_HOME/standalone/log/server-$NAME.log -f

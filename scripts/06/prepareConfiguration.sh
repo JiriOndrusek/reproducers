@@ -26,11 +26,9 @@ echo "Debug port is: $DEBUG_PORT"
 PROFILE=$p
 echo "Used profile: $PROFILE"
 
-cp -R $EAP_HOME/standalone $EAP_HOME-$NAME/
-
 cp -R $EAP_HOME/bin/standalone.conf $EAP_HOME/bin/$NAME.conf
 
-cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME-$NAME/configuration/$PROFILE-$NAME.xml
+cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME/standalone/configuration/$PROFILE-for-$NAME.xml
 
 cp -R $EAP_HOME/bin/standalone.sh $EAP_HOME/bin/$NAME.sh
 
@@ -40,5 +38,5 @@ sed -i '/8787/s/^#//g' $EAP_HOME/bin/$NAME.conf
 
 sed -i "s/8787/${DEBUG_PORT}/g" $EAP_HOME/bin/$NAME.conf
 
-sed -i "s/\"server.log\"/\"server-$NAME.log\"/g" $EAP_HOME-$NAME/standalone/configuration/$PROFILE-$NAME.xml
+sed -i "s/\"server.log\"/\"server-$NAME.log\"/g" $EAP_HOME/standalone/configuration/$PROFILE-for-$NAME.xml
 
