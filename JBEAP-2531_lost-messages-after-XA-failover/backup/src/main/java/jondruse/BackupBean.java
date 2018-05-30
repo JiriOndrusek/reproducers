@@ -23,7 +23,9 @@ import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.logging.Logger;
 
@@ -46,6 +48,10 @@ public class BackupBean {
     @Resource(mappedName = "java:/JmsXA")
     private XAConnectionFactory cf;
 
+
+    // list of received messages which were received and committed
+    private List<Map<String, String>> listOfReceivedMessages = new ArrayList<Map<String, String>>();
+
     @PostConstruct
     public void start() {
 
@@ -56,6 +62,7 @@ public class BackupBean {
 //        }
 
         stop = false;
+        listOfReceivedMessages.clear();
     counter = 0;
 
         Context context = null;
@@ -222,8 +229,11 @@ public class BackupBean {
             // Step 27. Commit!
             xaRes.commit(xid1, false);
 
+
+
 //            // add committed messages to list of received messages
-//            addMessages(listOfReceivedMessages, receivedMessageWindow);
+            addMessages(listOfReceivedMessages, receivedMessageWindow);
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + listOfReceivedMessages.size() + "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
             // increase number of received messages
             counter += receivedMessageWindow.size();
@@ -240,6 +250,31 @@ public class BackupBean {
         } finally {
         }
 
+    }
+
+
+    protected void addMessages(List<Map<String, String>> listOfReceivedMessages, List<Message> messages) throws JMSException {
+        for (Message m : messages) {
+            addMessage(listOfReceivedMessages, m);
+        }
+    }
+
+    protected void addMessage(List<Map<String, String>> listOfReceivedMessages, Message message) throws JMSException {
+        Map<String, String> mapOfPropertiesOfTheMessage = new HashMap<String, String>();
+        mapOfPropertiesOfTheMessage.put("messageId", message.getJMSMessageID());
+        if (message.getStringProperty("_AMQ_DUPL_ID") != null) {
+            mapOfPropertiesOfTheMessage.put("_AMQ_DUPL_ID", message.getStringProperty("_AMQ_DUPL_ID"));
+        }
+        // this is for MDB test versification (MDB creates new message with inMessageId property)
+        if (message.getStringProperty("inMessageId") != null) {
+            mapOfPropertiesOfTheMessage.put("inMessageId", message.getStringProperty("inMessageId"));
+        }
+        if (message.getStringProperty("JMSXGroupID") != null) {
+            mapOfPropertiesOfTheMessage.put("JMSXGroupID", message.getStringProperty("JMSXGroupID"));
+        }
+        mapOfPropertiesOfTheMessage.put("messagePriority", String.valueOf(message.getJMSPriority()));
+
+        listOfReceivedMessages.add(mapOfPropertiesOfTheMessage);
     }
 
     private String getTransactionStatus(UserTransaction transaction) throws SystemException {

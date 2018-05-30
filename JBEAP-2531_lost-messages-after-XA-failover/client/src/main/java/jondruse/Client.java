@@ -43,7 +43,7 @@ public class Client {
     private static final String PROVIDER_URL = "http-remoting://127.0.0.1:8080";
 
 
-    private static final String DEFAULT_MESSAGE_COUNT = "25";
+    private static final String DEFAULT_MESSAGE_COUNT = "2";
     private static final int DEFAULT_TRASACTIONS_COUNT = 1;
 
 
