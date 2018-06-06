@@ -1,0 +1,6 @@
+/subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=last-value-queue, value=true)
+
+jms-queue add --queue-address=TestQueue --entries=queue/TestQueue,java:jboss/exported/jms/queue/TestQueue --durable=true
+
+reload

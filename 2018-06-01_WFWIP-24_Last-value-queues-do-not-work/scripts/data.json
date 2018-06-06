@@ -1,0 +1,21 @@
+{
+  "servers": [
+    {
+      "name": "01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full",
+        "debugPort": 8787,
+        "debugSuspend": "y",
+        "javaOpts": ""
+      },
+      "deploy":["../servlet/target/WFWIP-24_Last-value-queues-do-not-work-servlet-1.0.0-SNAPSHOT.war", "test.war"]
+    }
+   ],
+  "tmpPrefix": "WFWIP-24",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"]
+}
+
+
+

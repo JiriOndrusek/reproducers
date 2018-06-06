@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    JBoss, Home of Professional Open Source
+    Copyright 2015, Red Hat, Inc. and/or its affiliates, and individual
+    contributors by the @authors tag. See the copyright.txt in the
+    distribution for a full listing of individual contributors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>jondruse_reproducers</groupId>
+        <artifactId>WFWIP-24_Last-value-queues-do-not-work</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>WFWIP-24_Last-value-queues-do-not-work-client</artifactId>
+    <packaging>jar</packaging>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <jboss.javaee6.version>2.0.0.Final</jboss.javaee6.version>
+        <jboss.javaee7.version>1.0.3.Final</jboss.javaee7.version>
+        <!--NOT USED FOR EAP 6 CONTAINER-->
+        <netty.version>3.2.5.Final</netty.version>
+        <!--NOT USED FOR EAP 6 CONTAINER-->
+        <!-- <hornetq.version>2.2.16.Final</hornetq.version> -->
+        <hornetq.version>2.3.2.Final</hornetq.version>
+
+        <eap5.client>5.2.0.GA</eap5.client>
+
+        <!-- HAVE TO BE CHANGED WITH EACH EAP 6.x RELEASE -->
+        <eap6.org.jboss.qa.hornetq.apps.clients.version>6.4.16.CP.CR1</eap6.org.jboss.qa.hornetq.apps.clients.version>
+        <eap6.client>${eap6.org.jboss.qa.hornetq.apps.clients.version}</eap6.client>
+        <eap6.controller.client>${eap6.org.jboss.qa.hornetq.apps.clients.version}</eap6.controller.client>
+        <eap6.cli.client>${eap6.org.jboss.qa.hornetq.apps.clients.version}</eap6.cli.client>
+
+        <!-- HAVE TO BE CHANGED WITH EACH EAP 7.x RELEASE   7.0.0.DR0-activemq-artemis -->
+        <eap7.org.jboss.qa.hornetq.apps.clients.version>7.2.0-Artemis2x-with-prefixes</eap7.org.jboss.qa.hornetq.apps.clients.version>
+            <eap7.client>7.1528099161-jmesnil-WFLY-9407_upgrade_artemis_2.4.0_with_prefix-jmesnil-2.5.0-SNAPSHOT</eap7.client>
+        <eap7.controller.client>7.1528099161-jmesnil-WFLY-9407_upgrade_artemis_2.4.0_with_prefix-jmesnil-2.5.0-SNAPSHOT</eap7.controller.client>
+        <eap7.cli.client>7.1528099161-jmesnil-WFLY-9407_upgrade_artemis_2.4.0_with_prefix-jmesnil-2.5.0-SNAPSHOT</eap7.cli.client>
+        <arquillian.eap7x.container.version>2.0.0.Final</arquillian.eap7x.container.version>
+        <artemis.version>7.2.0-Artemis2x-with-prefixes2</artemis.version>
+
+        <arquillian.version>1.1.1.Final</arquillian.version>
+        <artemis.wildfly.integration>1.0.2</artemis.wildfly.integration>
+        <version.shrinkwrap.resolvers>2.0.0</version.shrinkwrap.resolvers>
+        <!--<version.org.jboss.qa.creaper>0.8.1</version.org.jboss.qa.creaper>-->
+        <version.org.wildfly.extras.creaper>1.5.1-elytron.DR19</version.org.wildfly.extras.creaper>
+        <arquillian.eap6x.container.version>7.2.0.Final</arquillian.eap6x.container.version>
+        <arquillian.eap5x.container.version>1.0.0.CR3</arquillian.eap5x.container.version>
+        <version.byteman>3.0.5</version.byteman>
+        <version.commons-io>2.4</version.commons-io>
+        <version.junit>4.11</version.junit>
+        <version.log4j>1.2.16</version.log4j>
+        <version.jnp-client>5.0.5.Final</version.jnp-client>
+        <version.org.apache.maven.enforcer-plugin>3.0.0-M1</version.org.apache.maven.enforcer-plugin>
+        <version.org.jacoco>0.7.9</version.org.jacoco>
+        <version.org.jacoco.plugin>0.7.9</version.org.jacoco.plugin>
+        <xalan.version>2.7.0</xalan.version>
+        <surefire-version>2.19.1</surefire-version>
+        <qa.resource.monitor.version>0.0.6-SNAPSHOT</qa.resource.monitor.version>
+        <titlesTemplate>${project.basedir}/chapters_naming</titlesTemplate>
+        <MYTESTIP_1>127.0.0.1</MYTESTIP_1>
+        <JBOSS_JVM_XMX>788m</JBOSS_JVM_XMX>
+        <JBOSS_JVM_XMS>64m</JBOSS_JVM_XMS>
+        <surefire.prefer.ipv6>false</surefire.prefer.ipv6>
+        <surefire.prefer.ipv4>true</surefire.prefer.ipv4>
+
+        <eap.cli.config.eap6>${project.basedir}/../tests-eap6/src/test/resources/cli/jboss-cli.xml</eap.cli.config.eap6>
+        <eap.cli.config.eap7>${project.basedir}/../tests-eap7/src/test/resources/cli/jboss-cli.xml</eap.cli.config.eap7>
+
+        <!-- Property set by Jacoco plugin -->
+        <jacoco.agent></jacoco.agent>
+
+        <!-- Define this property when generate JaCoCo report. It must point to the Artemis project. -->
+        <artemis.basedir></artemis.basedir>
+
+        <hornetq.surefire.jvm.xmx>2G</hornetq.surefire.jvm.xmx>
+        <hornetq.surefire.jvm.xms>2G</hornetq.surefire.jvm.xms>
+    </properties>
+
+
+
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>org.jboss.eap</groupId>-->
+            <!--<artifactId>wildfly-jms-client-bom</artifactId>-->
+            <!--<type>pom</type>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${version.junit}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                <artifactId>shrinkwrap-resolver-depchain</artifactId>
+                <version>${version.shrinkwrap.resolvers}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.junit</groupId>
+                <artifactId>arquillian-junit-container</artifactId>
+                <version>${arquillian.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.byteman</groupId>
+                <artifactId>byteman</artifactId>
+                <version>${version.byteman}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.byteman</groupId>
+                <artifactId>byteman-submit</artifactId>
+                <version>${version.byteman}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${version.commons-io}</version>
+            </dependency>
+            <!-- Needed in EAP 6 profile -->
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>xalan</artifactId>
+                <version>${xalan.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${version.log4j}</version>
+            </dependency>
+            <!-- json parser - need in HornetQServerCliOperationsTestCase -->
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>20090211</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opencsv</groupId>
+                <artifactId>opencsv</artifactId>
+                <version>3.7</version>
+            </dependency>
+            <!-- this gives @depends annotation -->
+            <dependency>
+                <groupId>org.jboss.ejb3</groupId>
+                <artifactId>jboss-ejb3-ext-api</artifactId>
+                <version>2.2.0.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss</groupId>
+                <artifactId>jboss-dmr</artifactId>
+                <version>1.1.1.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.fusesource.stompjms</groupId>
+                <artifactId>stompjms-client</artifactId>
+                <version>1.19</version>
+            </dependency>
+            <dependency>
+                <groupId>org.kohsuke.metainf-services</groupId>
+                <artifactId>metainf-services</artifactId>
+                <version>1.5</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.googlecode.charts4j</groupId>
+                <artifactId>charts4j</artifactId>
+                <version>1.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.spec.javax.resource</groupId>
+                <artifactId>jboss-connector-api_1.7_spec</artifactId>
+                <version>1.0.0.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.6.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.qpid</groupId>
+                <artifactId>qpid-jms-client</artifactId>
+                <version>0.26.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.qa</groupId>
+                <artifactId>prepare-framework</artifactId>
+                <version>0.0.1.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.spec</groupId>
+                <artifactId>jboss-javaee-6.0</artifactId>
+                <version>${jboss.javaee6.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.spec</groupId>
+                <artifactId>jboss-javaee-7.0</artifactId>
+                <version>${jboss.javaee7.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.qa</groupId>
+                <artifactId>qa-resource-monitor-core</artifactId>
+                <version>${qa.resource.monitor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.as</groupId>
+                <artifactId>jboss-as-arquillian-container-managed</artifactId>
+                <version>${arquillian.eap6x.container.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.jboss.sasl</groupId>
+                        <artifactId>jboss-sasl</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.wildfly.arquillian</groupId>
+                <artifactId>wildfly-arquillian-container-managed</artifactId>
+                <version>${arquillian.eap7x.container.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.jboss.sasl</groupId>
+                        <artifactId>jboss-sasl</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wildfly.core</groupId>
+                        <artifactId>wildfly-remoting</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.remoting</groupId>
+                        <artifactId>jboss-remoting</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.undertow</groupId>
+                        <artifactId>undertow-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.arquillian.protocol</groupId>
+                <artifactId>arquillian-protocol-servlet</artifactId>
+                <version>${arquillian.version}</version>
+            </dependency>
+            <dependency>    <!-- this is necessary for tests with xa org.jboss.qa.hornetq.apps.clients -->
+                <groupId>org.jboss.jbossts.jta</groupId>
+                <artifactId>narayana-jta</artifactId>
+                <version>4.17.23.Final</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.hornetq</groupId>
+                        <artifactId>hornetq-journal</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.hornetq</groupId>
+                        <artifactId>hornetq-commons</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.netty</groupId>
+                        <artifactId>netty</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.logmanager</groupId>
+                        <artifactId>jboss-logmanager</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-server</artifactId>
+                <version>${artemis.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.activemq</groupId>
+                        <artifactId>artemis-core-client</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.netty</groupId>
+                        <artifactId>netty-all</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-commons</artifactId>
+                <version>${artemis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-cli</artifactId>
+                <version>${artemis.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.activemq</groupId>
+                        <artifactId>artemis-jms-server</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.activemq</groupId>
+                        <artifactId>artemis-dto</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-journal</artifactId>
+                <version>${artemis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-service-extensions</artifactId>
+                <version>${artemis.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.activemq</groupId>
+                        <artifactId>artemis-jms-client</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.activemq</groupId>
+                        <artifactId>artemis-core-client</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.activemq.artemis.integration</groupId>
+                <artifactId>artemis-wildfly-integration</artifactId>
+                <version>${artemis.wildfly.integration}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.10</version>
+            </dependency>
+            <!--<dependency>-->
+            <!--<groupId>org.jboss.qa.creaper</groupId>-->
+            <!--<artifactId>creaper-core</artifactId>-->
+            <!--<version>${version.org.jboss.qa.creaper}</version>-->
+            <!--<exclusions>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.jboss.as</groupId>-->
+            <!--<artifactId>jboss-as-controller-client</artifactId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.jboss.as</groupId>-->
+            <!--<artifactId>jboss-as-cli</artifactId>-->
+            <!--</exclusion>-->
+            <!--</exclusions>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+            <!--<groupId>org.jboss.qa.creaper</groupId>-->
+            <!--<artifactId>creaper-commands</artifactId>-->
+            <!--<version>${version.org.jboss.qa.creaper}</version>-->
+            <!--<exclusions>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.codehaus.groovy</groupId>-->
+            <!--<artifactId>groovy</artifactId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.codehaus.groovy</groupId>-->
+            <!--<artifactId>groovy-xml</artifactId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.jboss.sasl</groupId>-->
+            <!--<artifactId>jboss-sasl</artifactId>-->
+            <!--</exclusion>-->
+            <!--<exclusion>-->
+            <!--<groupId>org.wildfly</groupId>-->
+            <!--<artifactId>wildfly-patching</artifactId>-->
+            <!--</exclusion>-->
+            <!--</exclusions>-->
+            <!--</dependency>-->
+            <!-- used here because creaper commands for elytron are not released yet -->
+            <!--  todo remove it when they're available in creaper-commands -->
+            <dependency>
+                <groupId>org.wildfly.extras.creaper</groupId>
+                <artifactId>creaper-core</artifactId>
+                <version>${version.org.wildfly.extras.creaper}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.extras.creaper</groupId>
+                <artifactId>creaper-commands</artifactId>
+                <version>${version.org.wildfly.extras.creaper}</version>
+            </dependency>
+            <dependency>
+                <groupId>noe</groupId>
+                <artifactId>noe-core</artifactId>
+                <version>0.8.0</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>1.4.01</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.qa</groupId>
+                <artifactId>qa-testplan-generator-annotation-processor</artifactId>
+                <version>0.0.9</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.qa</groupId>
+                <artifactId>reliability-testing-toolkit</artifactId>
+                <version>0.1.2</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.wildfly.core</groupId>
+                        <artifactId>wildfly-controller-client</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wildfly.core</groupId>
+                        <artifactId>wildfly-cli</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.wildfly.core</groupId>
+                        <artifactId>wildfly-patching</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.spec</groupId>
+                        <artifactId>jboss-javaee-6.0</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jacoco</groupId>
+                <artifactId>org.jacoco.ant</artifactId>
+                <version>${version.org.jacoco}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jacoco</groupId>
+                <artifactId>org.jacoco.core</artifactId>
+                <version>${version.org.jacoco}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+
+
+    </dependencyManagement>
+
+
+    <profiles>
+        <profile>
+            <id>eap7x</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>eap</name>
+                    <value>7x</value>
+                </property>
+            </activation>
+
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>eap</groupId>
+                        <artifactId>eap-jboss-client</artifactId>
+                        <version>${eap7.client}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>eap</groupId>
+                        <artifactId>eap-wildfly-controller-client</artifactId>
+                        <version>${eap7.controller.client}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>eap</groupId>
+                        <artifactId>eap-jboss-cli-client</artifactId>
+                        <version>${eap7.cli.client}</version>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+
+            <dependencies>
+                <dependency>
+                    <groupId>eap</groupId>
+                    <artifactId>eap-jboss-client</artifactId>
+                    <type>jar</type>
+                </dependency>
+                <dependency>
+                    <groupId>eap</groupId>
+                    <artifactId>eap-wildfly-controller-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>eap</groupId>
+                    <artifactId>eap-jboss-cli-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.wildfly.arquillian</groupId>
+                    <artifactId>wildfly-arquillian-container-managed</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.spec</groupId>
+                    <artifactId>jboss-javaee-7.0</artifactId>
+                    <type>pom</type>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>artemis-server</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>artemis-cli</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>artemis-journal</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.activemq</groupId>
+                    <artifactId>artemis-service-extensions</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.activemq.artemis.integration</groupId>
+                    <artifactId>artemis-wildfly-integration</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jboss.shrinkwrap.resolver</groupId>
+                    <artifactId>shrinkwrap-resolver-depchain</artifactId>
+                    <type>pom</type>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.qpid</groupId>
+                    <artifactId>qpid-jms-client</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>org.jacoco.core</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>jondruse.Client</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>                 <!-- todo add mead repo + http://repository.jboss.org/nexus/content/groups/public/ -->
+            <id>jboss-qa-releases</id>
+            <name>JBoss QA Release Repository</name>
+            <url>http://repository.engineering.redhat.com/nexus/content/repositories/jboss-qa-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jboss-qa-snapshots</id>
+            <name>JBoss QA Snapshot Repository</name>
+            <url>http://repository.engineering.redhat.com/nexus/content/repositories/jboss-qa-snapshots/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>jboss-snapshots</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+        <!-- added our jboss qa repository with old HornetQ client jars -->
+
+        <repository>
+            <id>jboss-releases</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/releases</url>
+        </repository>
+        <repository>
+            <id>jboss-thirdparty</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+        </repository>
+        <repository>
+            <id>jboss-deprecated</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>
+        </repository>
+        <repository>
+            <id>jboss-maven-central</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/central</url>
+        </repository>
+        <repository>
+            <id>jboss-product-repository</id>
+            <name>JBoss Internal Product Repository</name>
+            <url>http://download.lab.bos.redhat.com/brewroot/repos/jb-eap-6.3-rhel-6-build/latest/maven</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>brew-eap5-current</id>
+            <url>http://download.lab.bos.redhat.com/brewroot/repos/jb-eap-5-rhel-6-candidate/latest/maven/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+
+</project>
