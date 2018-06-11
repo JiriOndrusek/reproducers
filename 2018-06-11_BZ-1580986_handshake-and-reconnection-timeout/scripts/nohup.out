@@ -1,0 +1,805 @@
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+[0m15:15:37,905 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:15:38,063 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m[0m15:15:38,125 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m[0m15:15:39,691 INFO  [org.xnio] (MSC service thread 1-2) XNIO Version 3.0.16.GA-redhat-1
+[0m[0m15:15:39,693 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:15:39,698 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:15:39,722 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m[0m15:15:39,748 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 37) JBAS010280: Activating Infinispan subsystem.
+[0m[0m15:15:39,770 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 38) JBAS016300: Activating JacORB Subsystem
+[0m[0m15:15:39,785 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m15:15:39,787 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m[0m15:15:39,808 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 45) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m[0m15:15:39,831 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 49) JBAS011800: Activating Naming Subsystem
+[0m[0m15:15:39,843 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 54) JBAS013371: Activating Security Subsystem
+[0m[33m15:15:39,845 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 56) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m15:15:39,855 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:15:40,004 INFO  [org.jboss.as.naming] (MSC service thread 1-1) JBAS011802: Starting Naming Service
+[0m[0m15:15:40,009 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-1) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:15:40,011 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 58) JBAS015537: Activating WebServices Extension
+[0m[0m15:15:40,012 INFO  [org.jboss.jaxr] (MSC service thread 1-8) JBAS014000: Started JAXR subsystem, binding JAXR connection factory into JNDI as: java:jboss/jaxr/ConnectionFactory
+[0m[0m15:15:40,146 INFO  [org.jboss.as.jacorb] (MSC service thread 1-4) JBAS016330: CORBA ORB Service started
+[0m[0m15:15:40,195 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-5) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m[0m15:15:40,218 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-5) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m[0m15:15:40,277 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m[0m15:15:40,309 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on 127.0.0.1:4447
+[0m[0m15:15:40,311 INFO  [org.jboss.as.remoting] (MSC service thread 1-7) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:15:40,312 INFO  [org.jboss.as.jacorb] (MSC service thread 1-2) JBAS016328: CORBA Naming Service started
+[0m[0m15:15:40,328 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m15:15:40,404 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingjournal,bindingsDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingbindings,largeMessagesDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messaginglargemessages,pagingDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingpaging)
+[0m[0m15:15:40,406 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221006: Waiting to obtain live lock
+[0m[0m15:15:40,407 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m[0m15:15:40,429 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221013: Using NIO Journal
+[0m[0m15:15:40,482 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221034: Waiting to obtain live lock
+[0m[0m15:15:40,483 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221035: Live Server Obtained live lock
+[0m[0m15:15:40,743 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5445 for CORE protocol
+[0m[0m15:15:40,744 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5455 for CORE protocol
+[0m[0m15:15:40,746 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221007: Server is now live
+[0m[0m15:15:40,746 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221001: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [89bb16f9-6d79-11e8-8281-8f9cfc22e6e4] 
+[0m[0m15:15:40,764 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 60) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+[0m[0m15:15:40,780 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 62) HQ221003: trying to deploy queue jms.queue.DLQ
+[0m[0m15:15:40,817 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 62) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+[0m[0m15:15:40,818 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 63) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+[0m[0m15:15:40,822 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-5) JBAS010406: Registered connection factory java:/JmsXA
+[0m[0m15:15:40,822 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 63) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+[0m[0m15:15:40,823 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 61) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+[0m[0m15:15:40,858 INFO  [org.hornetq.ra] (MSC service thread 1-5) HornetQ resource adaptor started
+[0m[0m15:15:40,858 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-5) IJ020002: Deployed: file://RaActivatorhornetq-ra
+[0m[0m15:15:40,860 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+[0m[0m15:15:40,904 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:15:40,905 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:15:40,905 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 3300ms - Started 195 of 232 services (68 services are lazy, passive or on-demand)
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+[0m15:16:20,012 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:16:20,199 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m[0m15:16:20,268 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m[0m15:16:21,906 INFO  [org.xnio] (MSC service thread 1-6) XNIO Version 3.0.16.GA-redhat-1
+[0m[0m15:16:21,909 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:16:21,913 INFO  [org.xnio.nio] (MSC service thread 1-6) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:16:21,929 INFO  [org.jboss.remoting] (MSC service thread 1-6) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m[0m15:16:21,944 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 37) JBAS010280: Activating Infinispan subsystem.
+[0m[0m15:16:21,954 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 38) JBAS016300: Activating JacORB Subsystem
+[0m[0m15:16:21,964 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-4) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m[0m15:16:22,000 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m15:16:22,006 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 49) JBAS011800: Activating Naming Subsystem
+[0m[0m15:16:22,014 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 45) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m[0m15:16:22,043 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 54) JBAS013371: Activating Security Subsystem
+[0m[33m15:16:22,047 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 56) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m15:16:22,051 INFO  [org.jboss.as.security] (MSC service thread 1-3) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:16:22,120 INFO  [org.jboss.as.naming] (MSC service thread 1-2) JBAS011802: Starting Naming Service
+[0m[0m15:16:22,124 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 58) JBAS015537: Activating WebServices Extension
+[0m[0m15:16:22,130 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:16:22,142 INFO  [org.jboss.jaxr] (MSC service thread 1-2) JBAS014000: Started JAXR subsystem, binding JAXR connection factory into JNDI as: java:jboss/jaxr/ConnectionFactory
+[0m[0m15:16:22,318 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-5) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m[0m15:16:22,326 INFO  [org.jboss.as.jacorb] (MSC service thread 1-4) JBAS016330: CORBA ORB Service started
+[0m[0m15:16:22,329 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-5) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m[0m15:16:22,395 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m[0m15:16:22,399 INFO  [org.jboss.as.remoting] (MSC service thread 1-5) JBAS017100: Listening on 127.0.0.1:4447
+[0m[0m15:16:22,402 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:16:22,526 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m[0m15:16:22,533 INFO  [org.jboss.as.jacorb] (MSC service thread 1-6) JBAS016328: CORBA Naming Service started
+[0m[0m15:16:22,538 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m15:16:22,589 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingjournal,bindingsDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingbindings,largeMessagesDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messaginglargemessages,pagingDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingpaging)
+[0m[0m15:16:22,591 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221006: Waiting to obtain live lock
+[0m[0m15:16:22,613 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221013: Using NIO Journal
+[0m[0m15:16:22,670 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221034: Waiting to obtain live lock
+[0m[0m15:16:22,670 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221035: Live Server Obtained live lock
+[0m[0m15:16:22,923 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5455 for CORE protocol
+[0m[0m15:16:22,925 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5445 for CORE protocol
+[0m[0m15:16:22,928 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221007: Server is now live
+[0m[0m15:16:22,928 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221001: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [a2df65c6-6d79-11e8-9510-d7c8228c5dbe] 
+[0m[0m15:16:22,931 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+[0m[0m15:16:23,008 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 60) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+[0m[0m15:16:23,023 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-1) JBAS010406: Registered connection factory java:/JmsXA
+[0m[0m15:16:23,029 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 63) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+[0m[0m15:16:23,030 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 62) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+[0m[0m15:16:23,031 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 61) HQ221003: trying to deploy queue jms.queue.DLQ
+[0m[0m15:16:23,034 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 61) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+[0m[0m15:16:23,056 INFO  [org.hornetq.ra] (MSC service thread 1-1) HornetQ resource adaptor started
+[0m[0m15:16:23,057 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-1) IJ020002: Deployed: file://RaActivatorhornetq-ra
+[0m[0m15:16:23,059 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+[0m[0m15:16:23,092 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:16:23,093 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:16:23,093 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 3343ms - Started 195 of 232 services (68 services are lazy, passive or on-demand)
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+[0m15:19:07,135 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:19:07,321 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m[0m15:19:07,378 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m[0m15:19:08,304 INFO  [org.xnio] (MSC service thread 1-7) XNIO Version 3.0.16.GA-redhat-1
+[0m[0m15:19:08,308 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:19:08,315 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:19:08,331 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m[0m15:19:08,363 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 37) JBAS010280: Activating Infinispan subsystem.
+[0m[0m15:19:08,370 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 38) JBAS016300: Activating JacORB Subsystem
+[0m[0m15:19:08,392 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 45) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m[0m15:19:08,399 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 54) JBAS013371: Activating Security Subsystem
+[0m[33m15:19:08,402 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 56) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m15:19:08,407 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-3) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m[0m15:19:08,407 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 49) JBAS011800: Activating Naming Subsystem
+[0m[0m15:19:08,425 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 58) JBAS015537: Activating WebServices Extension
+[0m[0m15:19:08,430 INFO  [org.jboss.as.security] (MSC service thread 1-5) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:19:08,563 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-7) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:19:08,565 INFO  [org.jboss.as.naming] (MSC service thread 1-7) JBAS011802: Starting Naming Service
+[0m[0m15:19:08,578 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m15:19:08,585 INFO  [org.jboss.jaxr] (MSC service thread 1-4) JBAS014000: Started JAXR subsystem, binding JAXR connection factory into JNDI as: java:jboss/jaxr/ConnectionFactory
+[0m[0m15:19:08,737 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m[0m15:19:08,763 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m[0m15:19:08,854 INFO  [org.jboss.as.jacorb] (MSC service thread 1-6) JBAS016330: CORBA ORB Service started
+[0m[0m15:19:08,892 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m[0m15:19:08,894 INFO  [org.jboss.as.remoting] (MSC service thread 1-5) JBAS017100: Listening on 127.0.0.1:4447
+[0m[0m15:19:08,900 INFO  [org.jboss.as.remoting] (MSC service thread 1-6) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:19:08,935 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m15:19:08,941 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m[0m15:19:08,967 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingjournal,bindingsDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingbindings,largeMessagesDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messaginglargemessages,pagingDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingpaging)
+[0m[0m15:19:08,969 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221006: Waiting to obtain live lock
+[0m[0m15:19:09,001 INFO  [org.jboss.as.jacorb] (MSC service thread 1-8) JBAS016328: CORBA Naming Service started
+[0m[0m15:19:09,003 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221013: Using NIO Journal
+[0m[0m15:19:09,055 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221034: Waiting to obtain live lock
+[0m[0m15:19:09,055 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221035: Live Server Obtained live lock
+[0m[0m15:19:09,248 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5445 for CORE protocol
+[0m[0m15:19:09,250 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5455 for CORE protocol
+[0m[0m15:19:09,253 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221007: Server is now live
+[0m[0m15:19:09,254 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221001: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [a2df65c6-6d79-11e8-9510-d7c8228c5dbe] 
+[0m[0m15:19:09,257 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+[0m[0m15:19:09,276 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 60) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+[0m[0m15:19:09,297 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 63) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+[0m[0m15:19:09,299 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 62) HQ221003: trying to deploy queue jms.queue.DLQ
+[0m[0m15:19:09,300 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 62) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+[0m[0m15:19:09,301 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 61) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+[0m[0m15:19:09,345 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) JBAS010406: Registered connection factory java:/JmsXA
+[0m[0m15:19:09,385 INFO  [org.hornetq.ra] (MSC service thread 1-7) HornetQ resource adaptor started
+[0m[0m15:19:09,386 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-7) IJ020002: Deployed: file://RaActivatorhornetq-ra
+[0m[0m15:19:09,387 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-3) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+[0m[0m15:19:09,427 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:19:09,428 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:19:09,428 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 2602ms - Started 195 of 232 services (68 services are lazy, passive or on-demand)
+[0m[0m15:19:16,352 INFO  [org.jboss.as.server] (Management Triggered Shutdown) JBAS015985: Shutting down in response to management operation '{"address" => [],"operation" => "shutdown","operation-headers" => {"caller-type" => "user","access-mechanism" => "NATIVE"}}'
+[0m[0m15:19:16,377 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+[0m[0m15:19:16,380 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) JBAS010410: Unbound JCA ConnectionFactory [java:/JmsXA]
+[0m[0m15:19:16,381 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 61) JBAS011605: Unbound messaging object to jndi name java:/ConnectionFactory
+[0m[0m15:19:16,382 INFO  [org.jboss.jaxr] (MSC service thread 1-2) JBAS014002: UnBinding JAXR ConnectionFactory: java:jboss/jaxr/ConnectionFactory
+[0m[0m15:19:16,383 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 19) JBAS011605: Unbound messaging object to jndi name java:/jms/queue/ExpiryQueue
+[0m[0m15:19:16,408 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003075: Coyote HTTP/1.1 pausing on: http-127.0.0.1:8080
+[0m[0m15:19:16,411 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003077: Coyote HTTP/1.1 stopping on : http-127.0.0.1:8080
+[0m[0m15:19:16,422 INFO  [org.apache.catalina.core] (MSC service thread 1-6) JBWEB001079: Container org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/] has not been started
+[0m[0m15:19:16,434 INFO  [org.hornetq.ra] (ServerService Thread Pool -- 29) HQ151003: HornetQ resource adaptor stopped
+[0m[0m15:19:16,512 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 29) HQ221002: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [a2df65c6-6d79-11e8-9510-d7c8228c5dbe] stopped
+[0m[0m15:19:16,535 INFO  [org.jboss.as] (MSC service thread 1-7) JBAS015950: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) stopped in 170ms
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n -Dorg.jboss.byteman.transform.all -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/git/projects/reproducers/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/scripts/rule01.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+*** start for thread: Reference Reaper
+[0m15:37:11,772 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:37:11,996 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m*** start for thread: MSC service thread 1-1
+*** start for thread: MSC service thread 1-2
+*** start for thread: MSC service thread 1-3
+*** start for thread: MSC service thread 1-4
+*** start for thread: MSC service thread 1-6
+*** start for thread: MSC service thread 1-5
+*** start for thread: MSC service thread 1-7
+[0m15:37:12,064 INFO  [org.jboss.as] (MSC service thread 1-6) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m*** start for thread: MSC service thread 1-8
+*** start for thread: Controller Boot Thread
+*** start for thread: ServerService Thread Pool -- 1
+*** start for thread: ServerService Thread Pool -- 2
+*** start for thread: ServerService Thread Pool -- 3
+*** start for thread: ServerService Thread Pool -- 4
+*** start for thread: ServerService Thread Pool -- 5
+*** start for thread: ServerService Thread Pool -- 6
+*** start for thread: ServerService Thread Pool -- 7
+*** start for thread: ServerService Thread Pool -- 8
+*** start for thread: ServerService Thread Pool -- 9
+*** start for thread: ServerService Thread Pool -- 10
+*** start for thread: ServerService Thread Pool -- 11
+*** start for thread: ServerService Thread Pool -- 12
+*** start for thread: ServerService Thread Pool -- 13
+*** start for thread: ServerService Thread Pool -- 14
+*** start for thread: ServerService Thread Pool -- 15
+*** start for thread: ServerService Thread Pool -- 16
+*** start for thread: ServerService Thread Pool -- 17
+*** start for thread: ServerService Thread Pool -- 18
+*** start for thread: ServerService Thread Pool -- 19
+*** start for thread: ServerService Thread Pool -- 20
+*** start for thread: ServerService Thread Pool -- 21
+*** start for thread: ServerService Thread Pool -- 22
+*** start for thread: ServerService Thread Pool -- 23
+*** start for thread: ServerService Thread Pool -- 24
+*** start for thread: ServerService Thread Pool -- 25
+*** start for thread: ServerService Thread Pool -- 26
+*** start for thread: ServerService Thread Pool -- 27
+*** start for thread: ServerService Thread Pool -- 28
+*** start for thread: ServerService Thread Pool -- 29
+*** start for thread: ServerService Thread Pool -- 30
+*** start for thread: DeploymentScanner-threads - 1
+[0m15:37:13,916 INFO  [org.xnio] (MSC service thread 1-3) XNIO Version 3.0.16.GA-redhat-1
+[0m*** start for thread: ServerService Thread Pool -- 31
+[0m15:37:13,921 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:37:13,925 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:37:13,940 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m*** start for thread: Remoting "01:MANAGEMENT" read-1
+*** start for thread: Remoting "01:MANAGEMENT" write-1
+*** start for thread: ServerService Thread Pool -- 32
+*** start for thread: ServerService Thread Pool -- 33
+*** start for thread: ServerService Thread Pool -- 34
+*** start for thread: ServerService Thread Pool -- 35
+*** start for thread: ServerService Thread Pool -- 36
+*** start for thread: ServerService Thread Pool -- 37
+*** start for thread: ServerService Thread Pool -- 38
+*** start for thread: ServerService Thread Pool -- 39
+[0m15:37:13,965 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 37) JBAS010280: Activating Infinispan subsystem.
+[0m[0m15:37:13,969 INFO  [org.jboss.as.jacorb] (ServerService Thread Pool -- 38) JBAS016300: Activating JacORB Subsystem
+[0m*** start for thread: ServerService Thread Pool -- 40
+*** start for thread: ServerService Thread Pool -- 41
+*** start for thread: ServerService Thread Pool -- 42
+*** start for thread: ServerService Thread Pool -- 43
+*** start for thread: ServerService Thread Pool -- 44
+*** start for thread: ServerService Thread Pool -- 45
+*** start for thread: ServerService Thread Pool -- 46
+*** start for thread: ServerService Thread Pool -- 47
+*** start for thread: ServerService Thread Pool -- 48
+[0m15:37:13,988 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 45) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m*** start for thread: ServerService Thread Pool -- 49
+*** start for thread: ServerService Thread Pool -- 50
+[0m15:37:14,011 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 49) JBAS011800: Activating Naming Subsystem
+[0m*** start for thread: ServerService Thread Pool -- 51
+[0m15:37:14,012 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-6) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m*** start for thread: ServerService Thread Pool -- 52
+*** start for thread: ServerService Thread Pool -- 53
+*** start for thread: IdleRemover
+*** start for thread: ServerService Thread Pool -- 54
+*** start for thread: ConnectionValidator
+*** start for thread: Remoting "01" read-1
+[0m15:37:14,042 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m*** start for thread: Remoting "01" write-1
+*** start for thread: ServerService Thread Pool -- 55
+*** start for thread: ServerService Thread Pool -- 56
+*** start for thread: ServerService Thread Pool -- 57
+*** start for thread: ServerService Thread Pool -- 58
+*** start for thread: ServerService Thread Pool -- 59
+[33m15:37:14,132 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 56) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m15:37:14,132 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 54) JBAS013371: Activating Security Subsystem
+[0m[0m15:37:14,150 INFO  [org.jboss.as.security] (MSC service thread 1-4) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:37:14,214 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-3) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:37:14,214 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 58) JBAS015537: Activating WebServices Extension
+[0m[0m15:37:14,222 INFO  [org.jboss.as.naming] (MSC service thread 1-8) JBAS011802: Starting Naming Service
+[0m[0m15:37:14,250 INFO  [org.jboss.jaxr] (MSC service thread 1-8) JBAS014000: Started JAXR subsystem, binding JAXR connection factory into JNDI as: java:jboss/jaxr/ConnectionFactory
+[0m*** start for thread: ejb-client-context-tasks-2-thread-1
+*** start for thread: ejb-client-context-tasks-2-thread-2
+*** start for thread: Timer-0
+*** start for thread: ContainerBackgroundProcessor[StandardEngine[jboss.web]]
+[0m15:37:14,453 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m*** start for thread: http-127.0.0.1:8080-Poller
+*** start for thread: http-127.0.0.1:8080-Acceptor-0
+[0m15:37:14,457 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-2) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m*** start for thread: Transaction Expired Entry Monitor
+*** start for thread: Periodic Recovery
+*** start for thread: ORB Run Thread
+[0m15:37:14,547 INFO  [org.jboss.as.jacorb] (MSC service thread 1-7) JBAS016330: CORBA ORB Service started
+[0m*** start for thread: Transaction Reaper
+*** start for thread: Transaction Reaper Worker 0
+[0m15:37:14,597 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:37:14,600 INFO  [org.jboss.as.remoting] (MSC service thread 1-4) JBAS017100: Listening on 127.0.0.1:4447
+[0m*** start for thread: DeploymentScanner-threads - 2
+[0m15:37:14,640 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-4) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m*** start for thread: server-timer
+*** start for thread: AOMRemoval
+*** start for thread: RequestController-1
+*** start for thread: Thread-79
+*** start for thread: ServerSocketListener
+*** start for thread: POAChangeToActive
+*** start for thread: AOMRemoval
+[0m15:37:14,751 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m*** start for thread: RequestController-2
+*** start for thread: AOMRemoval
+*** start for thread: POAChangeToActive
+*** start for thread: RequestController-3
+*** start for thread: POAChangeToActive
+*** start for thread: ServerService Thread Pool -- 60
+*** start for thread: ServerService Thread Pool -- 61
+[0m15:37:14,843 INFO  [org.jboss.as.jacorb] (MSC service thread 1-1) JBAS016328: CORBA Naming Service started
+[0m[0m15:37:14,853 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m[0m15:37:14,868 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingjournal,bindingsDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingbindings,largeMessagesDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messaginglargemessages,pagingDirectory=/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/data/messagingpaging)
+[0m[0m15:37:14,870 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221006: Waiting to obtain live lock
+[0m[0m15:37:14,919 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221013: Using NIO Journal
+[0m*** start for thread: hornetq-buffer-timeout
+*** start for thread: Thread-0 (HornetQ-scheduled-threads-1688401890)
+[0m15:37:15,023 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221034: Waiting to obtain live lock
+[0m[0m15:37:15,024 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221035: Live Server Obtained live lock
+[0m*** start for thread: Thread-0 (HornetQ-Asynchronous-Persistent-Writes756227759-1168189291)
+*** start for thread: Thread-0 (HornetQ-remoting-threads-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-117864789-404992545)
+*** start for thread: Thread-1 (HornetQ-scheduled-threads-1688401890)
+[0m15:37:15,286 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5455 for CORE protocol
+[0m*** start for thread: Thread-1 (HornetQ-remoting-threads-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-117864789-404992545)
+[0m15:37:15,288 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221020: Started Netty Acceptor version 3.6.10.Final-266dbdf 127.0.0.1:5445 for CORE protocol
+[0m*** start for thread: hornetq-failure-check-thread
+*** start for thread: hornetq-expiry-reaper-thread
+[0m15:37:15,290 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221007: Server is now live
+[0m[0m15:37:15,291 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 60) HQ221001: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [8d4a7702-6d7c-11e8-80cf-31386257a024] 
+[0m*** start for thread: ServerService Thread Pool -- 62
+*** start for thread: ServerService Thread Pool -- 63
+[0m15:37:15,321 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 61) JBAS011601: Bound messaging object to jndi name java:/ConnectionFactory
+[0m*** start for thread: Thread-2 (HornetQ-scheduled-threads-1688401890)
+[0m15:37:15,347 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 63) HQ221003: trying to deploy queue jms.queue.ExpiryQueue
+[0m*** start for thread: Thread-3 (HornetQ-scheduled-threads-1688401890)
+[0m15:37:15,408 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-2) JBAS010406: Registered connection factory java:/JmsXA
+[0m[0m15:37:15,408 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 63) JBAS011601: Bound messaging object to jndi name java:/jms/queue/ExpiryQueue
+[0m[0m15:37:15,409 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 62) HQ221003: trying to deploy queue jms.queue.DLQ
+[0m[0m15:37:15,414 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 62) JBAS011601: Bound messaging object to jndi name java:/jms/queue/DLQ
+[0m[0m15:37:15,415 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 60) JBAS011601: Bound messaging object to jndi name java:jboss/exported/jms/RemoteConnectionFactory
+[0m*** start for thread: Thread-4 (HornetQ-scheduled-threads-1688401890)
+*** start for thread: Thread-0 (HornetQ-client-global-scheduled-threads-1745488504)
+*** start for thread: Thread-2 (HornetQ-remoting-threads-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-117864789-404992545)
+*** start for thread: Thread-1 (HornetQ-client-global-scheduled-threads-1745488504)
+*** start for thread: Thread-0 (HornetQ-client-global-threads-427791182)
+*** start for thread: Thread-0 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-1 (HornetQ-client-global-threads-427791182)
+[0m15:37:15,497 INFO  [org.hornetq.ra] (MSC service thread 1-2) HornetQ resource adaptor started
+[0m[0m15:37:15,498 INFO  [org.jboss.as.connector.services.resourceadapters.ResourceAdapterActivatorService$ResourceAdapterActivator] (MSC service thread 1-2) IJ020002: Deployed: file://RaActivatorhornetq-ra
+[0m[0m15:37:15,500 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-8) JBAS010401: Bound JCA ConnectionFactory [java:/JmsXA]
+[0m[0m15:37:15,559 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:37:15,560 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:37:15,560 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 4138ms - Started 195 of 232 services (68 services are lazy, passive or on-demand)
+[0m*** start for thread: Thread-1 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-2 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-3 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-4 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: ServerService Thread Pool -- 64
+*** start for thread: Thread-5 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-6 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Remoting "01:MANAGEMENT" task-1
+*** start for thread: Remoting "01:MANAGEMENT" task-2
+*** start for thread: Thread-7 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Remoting "01:MANAGEMENT" task-3
+*** start for thread: Remoting "01:MANAGEMENT" task-4
+*** start for thread: management-handler-thread - 1
+*** start for thread: Remoting "01:MANAGEMENT" task-5
+*** start for thread: management-handler-thread - 2
+*** start for thread: Remoting "01:MANAGEMENT" task-6
+*** start for thread: Remoting "01:MANAGEMENT" task-7
+*** start for thread: Thread-8 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-9 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: ServerService Thread Pool -- 65
+*** start for thread: Thread-10 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-11 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-12 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-13 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-14 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-15 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-16 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-2 (HornetQ-client-global-scheduled-threads-1745488504)
+*** start for thread: Thread-17 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-18 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-19 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-20 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-21 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-22 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-23 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-24 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-25 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-26 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-27 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-28 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-29 (HornetQ-server-HornetQServerImpl::serverUUID=8d4a7702-6d7c-11e8-80cf-31386257a024-422862273)
+*** start for thread: Thread-3 (HornetQ-client-global-scheduled-threads-1745488504)
+*** start for thread: Thread-4 (HornetQ-client-global-scheduled-threads-1745488504)
+*** start for thread: Thread-2 (HornetQ-client-global-threads-427791182)
+[0m15:42:19,901 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-7) JBAS015876: Starting deployment of "server.jar" (runtime-name: "server.jar")
+[0m[0m15:42:20,044 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-8) JNDI bindings for session bean named CounterBean in deployment unit deployment "server.jar" are as follows:
+
+	java:global/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:app/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:module/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:jboss/exported/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:global/server/CounterBean
+	java:app/server/CounterBean
+	java:module/CounterBean
+
+[0m[0m15:42:20,045 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-8) JNDI bindings for session bean named CalculatorBean in deployment unit deployment "server.jar" are as follows:
+
+	java:global/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:app/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:module/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:jboss/exported/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:global/server/CalculatorBean
+	java:app/server/CalculatorBean
+	java:module/CalculatorBean
+
+[0m*** start for thread: Buffer reclamation thread
+*** start for thread: ServerService Thread Pool -- 66
+*** start for thread: ServerService Thread Pool -- 67
+[0m15:42:20,436 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) JBAS015859: Deployed "server.jar" (runtime-name : "server.jar")
+[0m*** start for thread: Remoting "01" task-1
+*** start for thread: Remoting "01" task-2
+*** start for thread: Remoting "01" task-3
+*** start for thread: Remoting "01" task-4
+*** start for thread: Remoting "01" task-5
+*** start for thread: Remoting "01" task-6
+*** start for thread: Remoting "01:MANAGEMENT" task-8
+*** start for thread: Remoting "01:MANAGEMENT" task-9
+*** start for thread: Remoting "01:MANAGEMENT" task-10
+*** start for thread: Remoting "01:MANAGEMENT" task-11
+*** start for thread: management-handler-thread - 3
+*** start for thread: ServerService Thread Pool -- 68
+*** start for thread: Remoting "01:MANAGEMENT" task-12
+*** start for thread: management-handler-thread - 4
+*** start for thread: Remoting "01:MANAGEMENT" task-13
+*** start for thread: management-handler-thread - 5
+*** start for thread: Management Triggered Shutdown
+[0m15:44:52,080 INFO  [org.jboss.as.server] (Management Triggered Shutdown) JBAS015985: Shutting down in response to management operation '{"address" => [],"operation" => "shutdown","operation-headers" => {"caller-type" => "user","access-mechanism" => "NATIVE"}}'
+[0m*** start for thread: Thread-2
+*** start for thread: Thread-3
+*** start for thread: Remoting "01:MANAGEMENT" task-14
+*** start for thread: Thread-67
+*** start for thread: MSC Shutdown Thread
+*** start for thread: Remoting "01:MANAGEMENT" task-15
+*** start for thread: Thread-73
+[0m15:44:52,096 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003075: Coyote HTTP/1.1 pausing on: http-127.0.0.1:8080
+[0m[0m15:44:52,097 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-8) JBWEB003077: Coyote HTTP/1.1 stopping on : http-127.0.0.1:8080
+[0m[0m15:44:52,103 INFO  [org.apache.catalina.core] (MSC service thread 1-8) JBWEB001079: Container org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/] has not been started
+[0m[0m15:44:52,103 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) JBAS010409: Unbound data source [java:jboss/datasources/ExampleDS]
+[0m*** start for thread: ServerService Thread Pool -- 69
+*** start for thread: http-127.0.0.1:8080-1
+*** start for thread: ServerService Thread Pool -- 70
+[0m15:44:52,109 INFO  [org.jboss.as.connector.deployment] (MSC service thread 1-7) JBAS010410: Unbound JCA ConnectionFactory [java:/JmsXA]
+[0m*** start for thread: ServerService Thread Pool -- 71
+*** start for thread: ServerService Thread Pool -- 72
+*** start for thread: ServerService Thread Pool -- 73
+*** start for thread: ServerService Thread Pool -- 74
+*** start for thread: ServerService Thread Pool -- 76
+[0m15:44:52,114 INFO  [org.jboss.as.messaging] (ServerService Thread Pool -- 68) JBAS011605: Unbound messaging object to jndi name java:/ConnectionFactory
+[0m[0m15:44:52,115 INFO  [org.jboss.jaxr] (MSC service thread 1-2) JBAS014002: UnBinding JAXR ConnectionFactory: java:jboss/jaxr/ConnectionFactory
+[0m*** start for thread: ServerService Thread Pool -- 75
+*** start for thread: POADestructor
+*** start for thread: POADestructor
+*** start for thread: POADestructor
+*** start for thread: ejb-client-context-tasks-2-thread-3
+*** start for thread: ejb-client-context-tasks-2-thread-4
+*** start for thread: POADestructor
+*** start for thread: Thread-3 (HornetQ-client-global-threads-427791182)
+[0m15:44:52,186 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment server.jar (runtime-name: server.jar) in 97ms
+[0m[0m15:44:52,186 INFO  [org.hornetq.ra] (ServerService Thread Pool -- 73) HQ151003: HornetQ resource adaptor stopped
+[0m[0m15:44:52,218 INFO  [org.hornetq.core.server] (ServerService Thread Pool -- 73) HQ221002: HornetQ Server version 2.3.25.SP24 (2.3.25.SP24, 123) [8d4a7702-6d7c-11e8-80cf-31386257a024] stopped
+[0m*** start for thread: ServerExecutorService Shutdown Thread
+[0m15:44:52,238 INFO  [org.jboss.as] (MSC service thread 1-8) JBAS015950: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) stopped in 151ms
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n -Dorg.jboss.byteman.transform.all -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/git/projects/reproducers/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/scripts/rule01.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+<><><><><><><><><><><> start for thread: Reference Reaper
+[0m15:45:22,311 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:45:22,581 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m<><><><><><><><><><><> start for thread: MSC service thread 1-1
+<><><><><><><><><><><> start for thread: MSC service thread 1-2
+<><><><><><><><><><><> start for thread: MSC service thread 1-3
+<><><><><><><><><><><> start for thread: MSC service thread 1-4
+<><><><><><><><><><><> start for thread: MSC service thread 1-5
+<><><><><><><><><><><> start for thread: MSC service thread 1-6
+<><><><><><><><><><><> start for thread: MSC service thread 1-8
+<><><><><><><><><><><> start for thread: MSC service thread 1-7
+[0m15:45:22,716 INFO  [org.jboss.as] (MSC service thread 1-8) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m<><><><><><><><><><><> start for thread: Controller Boot Thread
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 1
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 2
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 3
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 4
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 5
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 6
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 7
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 8
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 9
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 10
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 11
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 12
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 13
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 14
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 15
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 16
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 17
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 18
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 19
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 20
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 21
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 22
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 23
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 24
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 25
+<><><><><><><><><><><> start for thread: DeploymentScanner-threads - 1
+[0m15:45:24,217 INFO  [org.xnio] (MSC service thread 1-1) XNIO Version 3.0.16.GA-redhat-1
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 26
+[0m15:45:24,221 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:45:24,225 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:45:24,243 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" read-1
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" write-1
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 27
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 28
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 29
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 30
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 31
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 32
+[0m15:45:24,273 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 33
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 34
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 35
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 36
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 37
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 38
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 39
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 40
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 41
+[0m15:45:24,294 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 39) JBAS011800: Activating Naming Subsystem
+[0m[0m15:45:24,298 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 37) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 42
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 43
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 44
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 45
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 46
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 47
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 48
+[0m15:45:24,316 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013371: Activating Security Subsystem
+[0m[33m15:45:24,316 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 49
+<><><><><><><><><><><> start for thread: Remoting "01" read-1
+<><><><><><><><><><><> start for thread: Remoting "01" write-1
+[0m15:45:24,328 INFO  [org.jboss.as.security] (MSC service thread 1-5) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:45:24,331 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-1) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m[0m15:45:24,344 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m<><><><><><><><><><><> start for thread: ConnectionValidator
+<><><><><><><><><><><> start for thread: IdleRemover
+[0m15:45:24,353 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+[0m[0m15:45:24,403 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:45:24,403 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+[0m<><><><><><><><><><><> start for thread: ContainerBackgroundProcessor[StandardEngine[jboss.web]]
+<><><><><><><><><><><> start for thread: ejb-client-context-tasks-2-thread-1
+<><><><><><><><><><><> start for thread: ejb-client-context-tasks-2-thread-2
+<><><><><><><><><><><> start for thread: Timer-0
+[0m15:45:24,640 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-6) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m<><><><><><><><><><><> start for thread: http-127.0.0.1:8080-Poller
+<><><><><><><><><><><> start for thread: http-127.0.0.1:8080-Acceptor-0
+[0m15:45:24,662 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-6) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m<><><><><><><><><><><> start for thread: Transaction Expired Entry Monitor
+<><><><><><><><><><><> start for thread: Periodic Recovery
+<><><><><><><><><><><> start for thread: Transaction Reaper
+<><><><><><><><><><><> start for thread: Transaction Reaper Worker 0
+<><><><><><><><><><><> start for thread: DeploymentScanner-threads - 2
+[0m15:45:24,743 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m[0m15:45:24,747 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:45:24,748 INFO  [org.jboss.as.remoting] (MSC service thread 1-3) JBAS017100: Listening on 127.0.0.1:4447
+[0m<><><><><><><><><><><> start for thread: server-timer
+[0m15:45:24,772 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m<><><><><><><><><><><> start for thread: Thread-67
+[0m15:45:24,799 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 50
+[0m15:45:24,854 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:45:24,855 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:45:24,855 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 2928ms - Started 154 of 192 services (57 services are lazy, passive or on-demand)
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 51
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-1
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-2
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-3
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-4
+<><><><><><><><><><><> start for thread: management-handler-thread - 1
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-5
+<><><><><><><><><><><> start for thread: management-handler-thread - 2
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-6
+<><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-7
+<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 52
+[0m15:45:44,819 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Starting deployment of "server.jar" (runtime-name: "server.jar")
+[0m[0m15:45:45,056 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-4) JNDI bindings for session bean named CounterBean in deployment unit deployment "server.jar" are as follows:
+
+	java:global/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:app/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:module/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:jboss/exported/server/CounterBean!org.jboss.as.quickstarts.ejb.remote.stateful.RemoteCounter
+	java:global/server/CounterBean
+	java:app/server/CounterBean
+	java:module/CounterBean
+
+[0m[0m15:45:45,056 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-4) JNDI bindings for session bean named CalculatorBean in deployment unit deployment "server.jar" are as follows:
+
+	java:global/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:app/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:module/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:jboss/exported/server/CalculatorBean!org.jboss.as.quickstarts.ejb.remote.stateless.RemoteCalculator
+	java:global/server/CalculatorBean
+	java:app/server/CalculatorBean
+	java:module/CalculatorBean
+
+[0m<><><><><><><><><><><> start for thread: ServerService Thread Pool -- 53
+[0m15:45:45,350 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS015859: Deployed "server.jar" (runtime-name : "server.jar")
+[0m=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01
+
+  JAVA: /usr/local/java/jdk1.8.0_121//bin/java
+
+  JAVA_OPTS:  -server -XX:+UseCompressedOops -verbose:gc -Xloggc:"/home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/log/gc.log" -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=3M -XX:-TraceClassUnloading -Xms1303m -Xmx1303m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.modules.policy-permissions=true -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n -Dorg.jboss.byteman.transform.all -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/git/projects/reproducers/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/scripts/rule01.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true
+
+=========================================================================
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
+Listening for transport dt_socket at address: 8787
+<><><><><><><><><><><> start for thread: Reference Reaper
+[0m15:46:26,197 INFO  [org.jboss.modules] (main) JBoss Modules version 1.3.10.Final-redhat-1
+[0m[0m15:46:26,485 INFO  [org.jboss.msc] (main) JBoss MSC version 1.1.7.SP1-redhat-1
+[0m[0m15:46:26,556 INFO  [stdout] (main) <><><><><><><><><><><> start for thread: MSC service thread 1-1
+[0m[0m15:46:26,558 INFO  [stdout] (MSC service thread 1-1) <><><><><><><><><><><> start for thread: MSC service thread 1-2
+[0m[0m15:46:26,559 INFO  [stdout] (main) <><><><><><><><><><><> start for thread: MSC service thread 1-3
+[0m[0m15:46:26,560 INFO  [stdout] (MSC service thread 1-3) <><><><><><><><><><><> start for thread: MSC service thread 1-4
+[0m[0m15:46:26,560 INFO  [stdout] (MSC service thread 1-2) <><><><><><><><><><><> start for thread: MSC service thread 1-5
+[0m[0m15:46:26,562 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: MSC service thread 1-6
+[0m[0m15:46:26,563 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: MSC service thread 1-7
+[0m[0m15:46:26,563 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: MSC service thread 1-8
+[0m[0m15:46:26,572 INFO  [org.jboss.as] (MSC service thread 1-8) JBAS015899: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) starting
+[0m[0m15:46:26,978 INFO  [stdout] (MSC service thread 1-8) <><><><><><><><><><><> start for thread: Controller Boot Thread
+[0m[0m15:46:27,003 INFO  [stdout] (MSC service thread 1-7) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 1
+[0m[0m15:46:27,184 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 2
+[0m[0m15:46:27,189 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 3
+[0m[0m15:46:27,194 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 4
+[0m[0m15:46:27,198 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 5
+[0m[0m15:46:27,228 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 6
+[0m[0m15:46:27,237 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 7
+[0m[0m15:46:27,250 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 8
+[0m[0m15:46:27,270 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 9
+[0m[0m15:46:27,283 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 10
+[0m[0m15:46:27,294 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 11
+[0m[0m15:46:27,310 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 12
+[0m[0m15:46:27,316 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 13
+[0m[0m15:46:27,329 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 14
+[0m[0m15:46:27,338 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 15
+[0m[0m15:46:27,341 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 16
+[0m[0m15:46:27,363 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 17
+[0m[0m15:46:27,374 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 18
+[0m[0m15:46:27,928 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 19
+[0m[0m15:46:27,930 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 20
+[0m[0m15:46:27,932 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 21
+[0m[0m15:46:27,935 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 22
+[0m[0m15:46:27,939 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 23
+[0m[0m15:46:28,079 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 24
+[0m[0m15:46:28,080 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 25
+[0m[0m15:46:28,094 INFO  [stdout] (ServerService Thread Pool -- 8) <><><><><><><><><><><> start for thread: DeploymentScanner-threads - 1
+[0m[0m15:46:28,110 INFO  [org.xnio] (MSC service thread 1-2) XNIO Version 3.0.16.GA-redhat-1
+[0m[0m15:46:28,113 INFO  [org.jboss.as.server] (Controller Boot Thread) JBAS015888: Creating http management service using socket-binding (management-http)
+[0m[0m15:46:28,113 INFO  [stdout] (MSC service thread 1-1) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 26
+[0m[0m15:46:28,117 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.0.16.GA-redhat-1
+[0m[0m15:46:28,131 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 3.3.12.Final-redhat-2
+[0m[0m15:46:28,140 INFO  [stdout] (MSC service thread 1-2) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" read-1
+[0m[0m15:46:28,140 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 27
+[0m[0m15:46:28,144 INFO  [stdout] (MSC service thread 1-2) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" write-1
+[0m[0m15:46:28,144 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 28
+[0m[0m15:46:28,145 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 29
+[0m[0m15:46:28,146 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 30
+[0m[0m15:46:28,155 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 31
+[0m[0m15:46:28,157 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 32
+[0m[0m15:46:28,159 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+[0m[0m15:46:28,168 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 33
+[0m[0m15:46:28,169 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 34
+[0m[0m15:46:28,172 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 35
+[0m[0m15:46:28,180 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 36
+[0m[0m15:46:28,180 INFO  [org.jboss.as.connector.logging] (MSC service thread 1-6) JBAS010408: Starting JCA Subsystem (IronJacamar 1.0.41.Final-redhat-1)
+[0m[0m15:46:28,195 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 37
+[0m[0m15:46:28,198 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+[0m[0m15:46:28,198 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: ConnectionValidator
+[0m[0m15:46:28,200 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 38
+[0m[0m15:46:28,200 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: IdleRemover
+[0m[0m15:46:28,205 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 37) JBAS012615: Activated the following JSF Implementations: [main, 1.2]
+[0m[0m15:46:28,212 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 39
+[0m[0m15:46:28,221 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 40
+[0m[0m15:46:28,223 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 39) JBAS011800: Activating Naming Subsystem
+[0m[0m15:46:28,236 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) JBAS015400: Bound mail session [java:jboss/mail/Default]
+[0m[0m15:46:28,237 INFO  [org.jboss.as.naming] (MSC service thread 1-8) JBAS011802: Starting Naming Service
+[0m[0m15:46:28,239 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 41
+[0m[0m15:46:28,247 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 42
+[0m[0m15:46:28,256 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 43
+[0m[0m15:46:28,257 INFO  [stdout] (MSC service thread 1-8) <><><><><><><><><><><> start for thread: Remoting "01" read-1
+[0m[0m15:46:28,258 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 44
+[0m[0m15:46:28,263 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 45
+[0m[0m15:46:28,264 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013371: Activating Security Subsystem
+[0m[0m15:46:28,270 INFO  [org.jboss.as.security] (MSC service thread 1-6) JBAS013370: Current PicketBox version=4.1.7.Final-redhat-1
+[0m[0m15:46:28,271 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 46
+[0m[0m15:46:28,279 INFO  [stdout] (MSC service thread 1-8) <><><><><><><><><><><> start for thread: Remoting "01" write-1
+[0m[0m15:46:28,297 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 47
+[0m[33m15:46:28,301 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 46) JBAS010153: Node identifier property is set to the default value. Please make sure it is unique.
+[0m[0m15:46:28,309 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 48
+[0m[0m15:46:28,322 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 49
+[0m[0m15:46:28,348 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: ejb-client-context-tasks-2-thread-1
+[0m[0m15:46:28,351 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: ejb-client-context-tasks-2-thread-2
+[0m[0m15:46:28,380 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+[0m[0m15:46:28,450 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: Timer-0
+[0m[0m15:46:28,580 INFO  [stdout] (MSC service thread 1-1) <><><><><><><><><><><> start for thread: ContainerBackgroundProcessor[StandardEngine[jboss.web]]
+[0m[0m15:46:28,594 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: Transaction Expired Entry Monitor
+[0m[0m15:46:28,594 INFO  [stdout] (MSC service thread 1-5) <><><><><><><><><><><> start for thread: Periodic Recovery
+[0m[0m15:46:28,659 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-4) JBWEB003001: Coyote HTTP/1.1 initializing on : http-127.0.0.1:8080
+[0m[0m15:46:28,662 INFO  [stdout] (MSC service thread 1-3) <><><><><><><><><><><> start for thread: Transaction Reaper
+[0m[0m15:46:28,664 INFO  [stdout] (MSC service thread 1-3) <><><><><><><><><><><> start for thread: Transaction Reaper Worker 0
+[0m[0m15:46:28,665 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: http-127.0.0.1:8080-Poller
+[0m[0m15:46:28,666 INFO  [stdout] (MSC service thread 1-4) <><><><><><><><><><><> start for thread: http-127.0.0.1:8080-Acceptor-0
+[0m[0m15:46:28,676 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-4) JBWEB003000: Coyote HTTP/1.1 starting on: http-127.0.0.1:8080
+[0m[0m15:46:28,727 INFO  [org.jboss.as.remoting] (MSC service thread 1-8) JBAS017100: Listening on 127.0.0.1:4447
+[0m[0m15:46:28,727 INFO  [org.jboss.as.remoting] (MSC service thread 1-1) JBAS017100: Listening on 127.0.0.1:9999
+[0m[0m15:46:28,733 INFO  [stdout] (DeploymentScanner-threads - 1) <><><><><><><><><><><> start for thread: DeploymentScanner-threads - 2
+[0m[0m15:46:28,734 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) JBAS015012: Started FileSystemDeploymentService for directory /home/jondruse/work/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/6.4/f01-nodes/deployments
+[0m[0m15:46:28,745 INFO  [stdout] (MSC service thread 1-3) <><><><><><><><><><><> start for thread: server-timer
+[0m[0m15:46:28,791 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m15:46:28,807 INFO  [stdout] (MSC service thread 1-3) <><><><><><><><><><><> start for thread: Thread-67
+[0m[0m15:46:28,923 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBoss Web Services - Stack CXF Server 4.3.7.Final-redhat-1
+[0m[0m15:46:28,946 INFO  [stdout] (Controller Boot Thread) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 50
+[0m[0m15:46:29,002 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015961: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m15:46:29,003 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+[0m[0m15:46:29,003 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss EAP 6.4.20.Alpha1 (AS 7.5.20.Final-redhat-SNAPSHOT) started in 3288ms - Started 154 of 192 services (57 services are lazy, passive or on-demand)
+[0m[0m15:46:38,114 INFO  [stdout] (ServerService Thread Pool -- 1) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 51
+[0m[0m15:46:43,477 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-1
+[0m[0m15:46:43,484 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-2
+[0m[0m15:46:43,537 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-3
+[0m[0m15:46:43,562 INFO  [stdout] (Remoting "01:MANAGEMENT" task-3) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-4
+[0m[0m15:46:43,587 INFO  [stdout] (Remoting "01:MANAGEMENT" task-4) <><><><><><><><><><><> start for thread: management-handler-thread - 1
+[0m[0m15:46:43,620 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-5
+[0m[0m15:46:43,624 INFO  [stdout] (Remoting "01:MANAGEMENT" task-5) <><><><><><><><><><><> start for thread: management-handler-thread - 2
+[0m[0m15:46:43,646 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-6
+[0m[0m15:46:43,671 INFO  [stdout] (Remoting "01:MANAGEMENT" read-1) <><><><><><><><><><><> start for thread: Remoting "01:MANAGEMENT" task-7
+[0m[0m15:46:48,114 INFO  [stdout] (ServerService Thread Pool -- 26) <><><><><><><><><><><> start for thread: ServerService Thread Pool -- 52
+[0m

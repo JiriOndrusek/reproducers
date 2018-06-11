@@ -1,0 +1,22 @@
+{
+  "servers": [
+    {
+      "name": "01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "6",
+        "javaOpts": "$JAVA_OPTS -Dorg.jboss.byteman.transform.all -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:/home/jondruse/git/projects/reproducers/2018-06-11_BZ-1580986_handshake-and-reconnection-timeout/scripts/rule01.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true"
+      },
+      "deploy":[]
+    }
+   ],
+  "tmpPrefix": "BZ-1580986",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"]
+}
+
+
+
