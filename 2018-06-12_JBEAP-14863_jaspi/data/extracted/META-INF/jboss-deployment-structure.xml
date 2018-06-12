@@ -1,0 +1,8 @@
+<jboss-deployment-structure>
+  <deployment>
+    <dependencies>
+      <module name="org.wildfly.extension.undertow" />
+      <module name="javax.security.auth.message.api" />
+    </dependencies>
+  </deployment>
+</jboss-deployment-structure>

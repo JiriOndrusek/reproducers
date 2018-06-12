@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "name": "01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": ""
+      },
+      "deploy":["../data/test.war", "test.war"]
+    }
+   ],
+  "tmpPrefix": "JBEAP-14863_jaspi",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"],
+  "sleep": "1"
+}
+
+
+

@@ -1,0 +1,6 @@
+/subsystem=security/security-domain=jaspi:add(cache-type=default)
+/subsystem=security/security-domain=jaspi/authentication=jaspi:add(auth-modules=[{"code"=>"org.wildfly.extension.undertow.security.jaspi.modules.HTTPSchemeServerAuthModule", "login-module-stack-ref"=>"jaspi-stack"}])
+/subsystem=security/security-domain=jaspi/authentication=jaspi/login-module-stack=jaspi-stack:add(login-modules=[{"code"=>"org.jboss.security.auth.spi.SimpleServerLoginModule", "flag"=>"optional"}])
+
+
+reload

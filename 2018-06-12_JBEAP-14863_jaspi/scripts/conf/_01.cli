@@ -1,0 +1,13 @@
+/subsystem=security/security-domain=jaspi:add(cache-type=default)
+/subsystem=security/security-domain=jaspi/authentication=jaspi:add(auth-modules=[{"code"=>"org.wildfly.extension.undertow.security.jaspi.modules.HTTPSchemeServerAuthModule", "login-module-stack-ref"=>"jaspi-stack"}])
+/subsystem=security/security-domain=jaspi/authentication=jaspi/login-module-stack=jaspi-stack:add(login-modules=[{"code"=>"org.jboss.security.auth.spi.SimpleServerLoginModule", "flag"=>"optional"}])
+
+
+reload
+
+
+/subsystem=security/security-domain=jaspi-test:add(cache-type=default)
+/subsystem=security/security-domain=jaspi-test/authentication=jaspi:add(auth-modules=[{"code"=>"org.jboss.as.web.security.jaspi.modules.HTTPBasicServerAuthModule", "login-module-stack-ref"=>"lm-stack", "flag"=>"required"}])
+/subsystem=security/security-domain=jaspi-test/authentication=jaspi/login-module-stack=lm-stack:add(login-modules=[{"code"=>"UsersRoles", "flag"=>"required", "module-options"=>{"usersProperties"=>"../standalone/configuration/jaspi-users.properties", "rolesProperties"=>"../standalone/configuration/jaspi-roles.properties"}}], operation-headers={"allow-resource-service-restart"=>"true"})
+
+ reload
