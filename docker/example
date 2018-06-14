@@ -1,1 +1,6 @@
-./run /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/03 /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/03-nodes-01  ./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration
+./run /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/03 \
+ /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/03-nodes-01 \
+   -p 9990:9990 -p 8080:8080 eap_wrapper/01 ./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration
+
+
+run /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/07 /home/jondruse/work/2018-06-12_JBEAP-5252_cluster-not-created-directly/7.1/07-01 -p 9990:9990 -p 8080:8080 eap_wrapper/01 ./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration

@@ -31,6 +31,7 @@ do
     $EAP_HOME/bin/$cmd
 done
 
+echo "<><><><><> preparing <><><><><>"
 
 for (( i=0; i<$count; i++ ))
 do
@@ -38,6 +39,10 @@ do
     name=`jq ".servers[$i].name" data.json`
     temp="${name%\"}"
     name="${temp#\"}"
+
+    sameData=`jq ".sameData" data.json`
+    temp="${sameData%\"}"
+    sameData="${temp#\"}"
 
     profile=`jq ".servers[$i].configuration.profile" data.json`
     temp="${profile%\"}"
@@ -47,7 +52,8 @@ do
 
     javaOpts=`jq ".servers[$i].configuration.javaOpts" data.json`
 
-    ../../scripts/07/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile
+    echo "../../scripts/09/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData"
+    ../../scripts/09/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData
 
     javaOpts=${javaOpts:1:-1}
 
@@ -92,7 +98,14 @@ done
 
 cd $p
 
-sleep 15s
+echo "<><><><><> sleeping <><><><><>"
+
+sleep=`jq ".sleep" data.json`
+temp="${sleep%\"}"
+sleep="${temp#\"}"
+
+
+sleep ${sleep}s
 
 
 for (( i=0; i<$count; i++ ))

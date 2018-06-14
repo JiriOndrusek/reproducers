@@ -86,7 +86,7 @@ done
 
 cd $p
 
-sleep 5s
+sleep 20s
 
 
 for (( i=0; i<$count; i++ ))

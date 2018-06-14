@@ -1,6 +1,8 @@
 /subsystem=logging/console-handler=CONSOLE:add(level=TRACE,formatter="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n")
 /subsystem=logging/root-logger=ROOT:add-handler(name=CONSOLE)
 
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-port,value=23666)
+
 /subsystem=logging/logger=org.apache.activemq.artemis.core.server.cluster.impl:add
 /subsystem=logging/logger=org.apache.activemq.artemis.core.server.cluster.impl:write-attribute(name="level", value="TRACE")
 

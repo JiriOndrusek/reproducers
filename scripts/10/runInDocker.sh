@@ -59,6 +59,10 @@ do
         temp="${suspend%\"}"
         suspend="${temp#\"}"
 
+        ip=`jq ".servers[$i].configuration.ip" data.json`
+        temp="${ip%\"}"
+        ip="${temp#\"}"
+
         declare -i debugPort=`jq ".servers[$i].configuration.debugPort" data.json`
 
         declare -i offset=`jq ".servers[$i].configuration.offset" data.json`
@@ -67,11 +71,11 @@ do
         echo "<><><><> starting $name <><><><><>"
         if [ 'n' == '$DEBUG_SUSPEND'  ]
         then
-            echo "../../scripts/09/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -det=$DETACHED"
-            ../../scripts/10/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND -det=$DETACHED
+            echo "../../scripts/09/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -det=$DETACHED" -ip=${ip}
+            ../../scripts/10/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND -det=$DETACHED -ip=${ip}
         else
-            echo "../../scripts/09/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend --det=$DETACHED"
-            ../../scripts/10/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -det=$DETACHED
+            echo "../../scripts/09/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend --det=$DETACHED" -ip=${ip}
+            ../../scripts/10/runConfigurationInDocker.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -det=$DETACHED -ip=${ip}
         fi
 
     fi

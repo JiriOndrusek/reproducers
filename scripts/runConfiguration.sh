@@ -43,7 +43,7 @@ file="/tmp/${TMP_PREFIX}_running_${NAME}.txt"
         echo "EXITTING"
         exit 1
     else
-        echo "starting ....."
+        echo ".... starting ....."
     fi
 
 

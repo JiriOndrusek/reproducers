@@ -1,11 +1,11 @@
 #!/bin/bash
 
+
 declare -i count=`jq '.servers | length' data.json`
 
 tmpPrefix=`jq '.tmpPrefix' data.json`
 temp="${tmpPrefix%\"}"
 tmpPrefix="${temp#\"}"
-
 
 for (( i=0; i<$count; i++ ))
 do

@@ -12,4 +12,12 @@ done
 NAME=$c
 echo "Configuration name: $NAME"
 
-tail ${EAP_HOME}-nodes/log/server-for-$NAME.log -f
+SAME_DATA=$s_d
+echo "Use same data folder: $SAME_DATA"
+
+if [ "$SAME_DATA" == "y" ]
+then
+    tail ${EAP_HOME}-nodes/log/server-for-$NAME.log -f
+else
+    tail ${EAP_HOME}-nodes-$NAME/log/server-for-$NAME.log -f
+fi

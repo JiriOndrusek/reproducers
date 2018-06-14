@@ -1,4 +1,12 @@
-##!/bin/bash
+#!/bin/bash
+
+echo
+echo "********************************************************"
+echo "************   RUN_CONFIGURATION.SH 9 ******************"
+echo "********************************************************"
+echo
+
+
 #while [ $# -gt 0 ]; do
 #
 #   if [[ $1 == *"--"* ]]; then
@@ -33,6 +41,9 @@ case $i in
     -b=*|--bacground=*)
     BACKGROUND="${i#*=}"
     ;;
+    -s_d=*|--same_data=*)
+    SAME_DATA="${i#*=}"
+    ;;
     *)
         NAME="${i#}"       # unknown option
     ;;
@@ -49,6 +60,7 @@ echo "runConfiguration.sh->Offset: $OFFSET"
 echo "runConfiguration.sh->Debug port is: $DEBUG_PORT"
 echo "runConfiguration.sh->Suspend is: $DEBUG_SUSPEND"
 echo "runConfiguration.sh->Background is: $BACKGROUND"
+echo "runConfiguration.sh->Same data is: $SAME_DATA"
 echo
 
 
@@ -72,14 +84,29 @@ sed -i "s/${DEBUG_PORT},server=y,suspend=y/${DEBUG_PORT},server=y,suspend=${DEBU
 
 if [ "$BACKGROUND" == "true" ]
 then
-    echo "nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &"
-    nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &
-    echo $! > $file
-else
-    echo 'cmd' > $file
-    echo "$EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
-    $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME
 
+    if [ "$SAME_DATA" == "y" ]
+    then
+        echo "nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &"
+        nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &
+        echo $! > $file
+    else
+        echo "nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &"
+        nohup $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME 2>&1 &
+        echo $! > $file
+
+    fi
+else
+if [ "$SAME_DATA" == "y" ]
+    then
+        echo 'cmd' > $file
+        echo "$EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
+        $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME
+    else
+ echo 'cmd' > $file
+        echo "$EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
+        $EAP_HOME/bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -b 127.0.0.1 -Djboss.server.base.dir=$EAP_HOME-nodes-$NAME -Djboss.socket.binding.port-offset=$off -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME
+    fi
     rm $file
     echo STOPPED
 fi

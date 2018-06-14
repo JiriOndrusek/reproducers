@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker build -t eap_wrapper/01 .

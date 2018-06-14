@@ -1,9 +1,10 @@
 #!/bin/bash
 
 echo
+echo "********************************************************"
+echo "****************   RUN.SH 9 ****************************"
+echo "********************************************************"
 echo
-echo "<><><><><><><><><><>"
-
 
 for i in "$@"
 do
@@ -66,6 +67,9 @@ do
         temp="${profile%\"}"
         profile="${temp#\"}"
 
+        sameData=`jq ".sameData" data.json`
+        temp="${sameData%\"}"
+        sameData="${temp#\"}"
 
         suspend=`jq ".servers[$i].configuration.debugSuspend" data.json`
         temp="${suspend%\"}"
@@ -79,11 +83,11 @@ do
         echo "<><><><> starting $name <><><><><>"
         if [ 'n' == '$DEBUG_SUSPEND'  ]
         then
-            echo "../../scripts/04/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND"
-            ../../scripts/07/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND
+            echo "../../scripts/09/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND -s_d=$sameData"
+            ../../scripts/09/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s='n' -b=$BACKGROUND -s_d=$sameData
         else
-            echo "../../scripts/04/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -b=$BACKGROUND"
-            ../../scripts/07/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -b=$BACKGROUND
+            echo "../../scripts/09/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -b=$BACKGROUND" -s_d=$sameData
+            ../../scripts/09/runConfiguration.sh -n=$name -t=$tmpPrefix -p=$profile -d=$debugPort -o=$offset -s=$suspend -b=$BACKGROUND -s_d=$sameData
         fi
 
     fi

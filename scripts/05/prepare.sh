@@ -86,7 +86,7 @@ done
 
 cd $p
 
-sleep 15s
+sleep 5s
 
 
 for (( i=0; i<$count; i++ ))
@@ -102,7 +102,7 @@ do
 
 
     declare -i offset=`jq ".servers[$i].configuration.offset" data.json`
-    declare -i remotePort=9990+offset
+    declare -i remotePort=9999+offset
 
     echo
     echo "<><><><> configuring $name <><><><><>"

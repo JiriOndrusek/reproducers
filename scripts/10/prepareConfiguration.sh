@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "********************************************************"
+echo "**********   PREPARE_CONFIGURATION.SH 10 ***************"
+echo "********************************************************"
+
 #--c configuration name
 #--d_p debug port
 #--d_s debug suspend

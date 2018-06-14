@@ -1,11 +1,22 @@
 #!/bin/bash
+echo "********************************************************"
+echo "***************   PREPARE.SH 10 ************************"
+echo "********************************************************"
 
 declare -i count=`jq '.servers | length' data.json`
 
 declare -i usersCount=`jq ".users | length" data.json`
 
+execution=`jq ".execution" data.json`
+temp="${execution%\"}"
+execution="${temp#\"}"
+
 
 echo "<><><><><> adding user <><><><><>"
+
+echo "adding user by command:add-user.sh -a mngmt_user W3lcome!"
+$EAP_HOME/bin/add-user.sh mngmtUser W3lcome!
+
 for (( u=0; u<$usersCount; u++ ))
 do
     declare -i usersParam=`jq ".users[$u] | length" data.json`
@@ -40,9 +51,12 @@ do
     temp="${name%\"}"
     name="${temp#\"}"
 
-    sameData=`jq ".sameData" data.json`
-    temp="${sameData%\"}"
-    sameData="${temp#\"}"
+    if [ "$execution" == "sameFolder" ]
+    then
+        $sameData=y
+    else
+        $sameData=n
+    fi
 
     profile=`jq ".servers[$i].configuration.profile" data.json`
     temp="${profile%\"}"
@@ -52,8 +66,8 @@ do
 
     javaOpts=`jq ".servers[$i].configuration.javaOpts" data.json`
 
-    echo "../../scripts/09/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData"
-    ../../scripts/09/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData
+    echo "../../scripts/10/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData"
+    ../../scripts/10/prepareConfiguration.sh --c $name  --d_p $debugPort --p $profile --s_d $sameData
 
     javaOpts=${javaOpts:1:-1}
 
@@ -154,3 +168,29 @@ do
 
 
 done
+
+
+if [ "$execution" == "docker" ]
+then
+
+echo
+echo "********************************************************"
+echo "***********   STATING DOCKER 10 ************************"
+echo "********************************************************"
+echo
+
+    ./kill.sh
+
+    docker network create --subnet=172.18.0.0/16 mynet123
+
+    #hack of logging.properties, shouldn't be needed when server is configured in embedded mode or started in docker instead
+    # not needed, after one start it is fixed autimatically
+
+    #run in doker -d
+    ../../scripts/10/runInDocker.sh -d=y
+
+fi
+
+
+#docker attach
+#

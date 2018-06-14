@@ -1,10 +1,35 @@
 #!/bin/bash
 
-
-echo "adding user"
-$EAP_HOME/bin//add-user.sh -a -g users -u admin -p admin123+
-
 declare -i count=`jq '.servers | length' data.json`
+
+declare -i usersCount=`jq ".users | length" data.json`
+
+
+echo "<><><><><> adding user <><><><><>"
+for (( u=0; u<$usersCount; u++ ))
+do
+    declare -i usersParam=`jq ".users[$u] | length" data.json`
+
+    cmd=`jq ".users[$u][0]" data.json`
+    temp="${cmd%\"}"
+    cmd="${temp#\"}"
+
+    temp=`jq ".users[$u][1]" data.json`
+    temp="${temp%\"}"
+    cmd="${cmd} -u ${temp#\"}"
+
+
+    temp=`jq ".users[$u][2]" data.json`
+    temp="${temp%\"}"
+    cmd="${cmd} -p ${temp#\"}"
+
+    temp=`jq ".users[$u][3]" data.json`
+    temp="${temp%\"}"
+    cmd="${cmd} -g ${temp#\"}"
+
+    $EAP_HOME/bin/$cmd
+done
+
 
 for (( i=0; i<$count; i++ ))
 do
@@ -31,13 +56,33 @@ done
 
 ./run.sh
 
-sleep 10s
+#sleep 10s
 
 p=$PWD
 
-cd ..
+declare -i buildsCount=`jq ".builds | length" data.json`
 
-mvn clean install -Prh
+
+echo "<><><><><> building <><><><><>"
+for (( b=0; b<$buildsCount; b++ ))
+do
+
+    buildPath=`jq ".builds[$b]" data.json`
+    temp="${buildPath%\"}"
+    buildPath="${temp#\"}"
+
+    ((b=b+1))
+
+
+    buildCmd=`jq ".builds[$b]" data.json`
+    temp="${buildCmd%\"}"
+    buildCmd="${temp#\"}"
+
+    cd $buildPath
+
+    $buildCmd
+
+done
 
 cd $p
 

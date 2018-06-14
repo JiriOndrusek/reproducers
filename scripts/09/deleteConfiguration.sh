@@ -13,6 +13,16 @@ done
 NAME=$c
 echo "Deleted configuration name: $NAME"
 
-rm -rf $EAP_HOME-nodes
+SAME_DATA=$s_d
+echo "Use same data folder: $SAME_DATA"
+
+
+if [ "$SAME_DATA" == "y" ]
+then
+    rm -rf $EAP_HOME-nodes
+else
+    rm -rf $EAP_HOME-nodes-$NAME
+fi
+
 rm -f $EAP_HOME/bin/standalone-for-$NAME.sh
 rm -f $EAP_HOME/bin/standalone-for-$NAME.conf

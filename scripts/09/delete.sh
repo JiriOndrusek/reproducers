@@ -24,9 +24,14 @@ do
     temp="${name%\"}"
     name="${temp#\"}"
 
+
+    sameData=`jq ".sameData" data.json`
+    temp="${sameData%\"}"
+    sameData="${temp#\"}"
+
     echo
     echo "<><><><> deleting $name <><><><><>"
-    ../../scripts/09/deleteConfiguration.sh --c $name
+    ../../scripts/09/deleteConfiguration.sh --c $name --s_d $sameData
 done
 
 echo

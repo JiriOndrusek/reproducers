@@ -33,6 +33,9 @@ case $i in
     -det=*|--detached=*)
     DETACHED="${i#*=}"
     ;;
+    -ip=*|--op_address=*)
+    IP="${i#*=}"
+    ;;
     *)
         NAME="${i#}"       # unknown option
     ;;
@@ -49,6 +52,7 @@ echo "runConfiguration.sh->Offset: $OFFSET"
 echo "runConfiguration.sh->Debug port is: $DEBUG_PORT"
 echo "runConfiguration.sh->Suspend is: $DEBUG_SUSPEND"
 echo "runConfiguration.sh->Detached is: $DETACHED"
+echo "runConfiguration.sh->IP Adress is: $IP"
 echo
 
 
@@ -73,16 +77,19 @@ declare -i local8080=8080+$off
 declare -i local8443=8443+$off
 declare -i local9990=9990+$off
 
+COMMAND="-p $local8080:8080 -p $local8443:8443 -p $DEBUG_PORT:8787 -p $local9990:9990 --net mynet123 --ip ${IP} eap_wrapper/01 ./bin/standalone-for-$NAME.sh -c $PROFILE-for-$NAME.xml -bprivate ${IP} -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration -Djava.net.preferIPv4Stack=true -Djboss.node.name=$NAME"
+echo $COMMAND
+
 if [ "$DETACHED" == "y" ]
 then
-    ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} -d -p $local8080:8080 -p $local8443:8443 -p $DEBUG_PORT:8787 -p $local9990:9990 eap_wrapper/01 ./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration > $file
+    echo ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} -d ${COMMAND}
+    ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} -d $COMMAND > $file
 else
     echo 'cmd' > $file
-    ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} -p $local8080:8080 -p $local8443:8443 -p $DEBUG_PORT:8787 -p $local9990:9990 eap_wrapper/01 ./bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 -Djboss.server.base.dir=/configuration
+    echo ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} $COMMAND
+    ../../docker/run $EAP_HOME ${EAP_HOME}-nodes-${NAME} $COMMAND
      rm $file
     echo STOPPED
 fi
-
-
 
 #///home/jondruse/git/projects/reproducers/scripts/09/runConfiguration.sh

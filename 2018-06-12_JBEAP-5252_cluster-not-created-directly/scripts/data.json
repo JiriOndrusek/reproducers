@@ -8,7 +8,8 @@
         "debugPort": 8787,
         "debugSuspend": "n",
         "version": "7",
-        "javaOpts": ""
+        "javaOpts": "",
+        "ip": "172.18.0.22"
       },
       "deploy":[]
     },
@@ -20,7 +21,8 @@
         "debugPort": 8888,
         "debugSuspend": "n",
         "version": "7",
-        "javaOpts": ""
+        "javaOpts": "",
+        "ip": "172.18.0.23"
       },
       "deploy":[]
     }
@@ -29,7 +31,7 @@
   "users": [],
   "builds": ["..", "mvn clean install -Prh"],
   "sleep": "10",
-  "sameData": "n"
+  "execution": "docker"
 
 }
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 #--c configuration name
 #--d_p debug port
 #--d_s debug suspend
@@ -26,11 +28,30 @@ echo "Debug port is: $DEBUG_PORT"
 PROFILE=$p
 echo "Used profile: $PROFILE"
 
-cp -R $EAP_HOME/standalone $EAP_HOME-nodes/
+SAME_DATA=$s_d
+echo "Use same data folder: $SAME_DATA"
+
+
+if [ "$SAME_DATA" == "y" ]
+then
+    cp -R $EAP_HOME/standalone $EAP_HOME-nodes/
+
+    cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME-nodes/configuration/$PROFILE-for-$NAME.xml
+
+    sed -i "s/\"server.log\"/\"server-for-$NAME.log\"/g" $EAP_HOME-nodes/configuration/$PROFILE-for-$NAME.xml
+
+else
+# different folders
+    cp -R $EAP_HOME/standalone $EAP_HOME-nodes-$NAME/
+
+    cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME-nodes-$NAME/configuration/$PROFILE-for-$NAME.xml
+
+    sed -i "s/\"server.log\"/\"server-for-$NAME.log\"/g" $EAP_HOME-nodes-$NAME/configuration/$PROFILE-for-$NAME.xml
+
+fi
+
 
 cp -R $EAP_HOME/bin/standalone.conf $EAP_HOME/bin/standalone-for-$NAME.conf
-
-cp -R $EAP_HOME/standalone/configuration/$PROFILE.xml $EAP_HOME-nodes/configuration/$PROFILE-for-$NAME.xml
 
 cp -R $EAP_HOME/bin/standalone.sh $EAP_HOME/bin/standalone-for-$NAME.sh
 
@@ -40,5 +61,5 @@ sed -i '/8787/s/^#//g' $EAP_HOME/bin/standalone-for-$NAME.conf
 
 sed -i "s/8787/${DEBUG_PORT}/g" $EAP_HOME/bin/standalone-for-$NAME.conf
 
-sed -i "s/\"server.log\"/\"server-for-$NAME.log\"/g" $EAP_HOME-nodes/configuration/$PROFILE-for-$NAME.xml
+
 
