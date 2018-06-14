@@ -1,0 +1,37 @@
+{
+  "servers": [
+    {
+      "name": "01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full-ha",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    },
+    {
+      "name": "02",
+      "configuration": {
+        "offset": 1000,
+        "profile": "standalone-full-ha",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": ""
+      },
+      "deploy":[]
+    }
+   ],
+  "tmpPrefix": "JBEAP-5252_cluster-not-created-directly",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"],
+  "sleep": "10",
+  "sameData": "n"
+
+}
+
+
+

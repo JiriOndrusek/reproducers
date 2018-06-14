@@ -1,0 +1,18 @@
+/subsystem=logging/console-handler=CONSOLE:add(level=TRACE,formatter="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%E%n")
+/subsystem=logging/root-logger=ROOT:add-handler(name=CONSOLE)
+
+/subsystem=logging/logger=org.apache.activemq.artemis.core.server.cluster.impl:add
+/subsystem=logging/logger=org.apache.activemq.artemis.core.server.cluster.impl:write-attribute(name="level", value="TRACE")
+
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password, value=changeit)
+
+/subsystem=messaging-activemq/server=default/:write-attribute(name=security-enabled,value=false)
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=cluster0:add(host=127.0.0.1,port=9080)
+/subsystem=messaging-activemq/server=default/http-connector=cluster0-connector:add(socket-binding=cluster0,endpoint=http-acceptor)
+/subsystem=messaging-activemq/server=default/cluster-connection=cluster0:add(cluster-connection-address=jms,static-connectors=[cluster0-connector],allow-direct-connections-only=true,connector-name=http-connector)
+
+/socket-binding-group=standard-sockets/local-destination-outbound-socket-binding=http-messaging:add(socket-binding-ref=http)
+/subsystem=messaging-activemq/server=default/http-connector=http-connector:write-attribute(name=socket-binding, value=http-messaging)
+
+
+reload
