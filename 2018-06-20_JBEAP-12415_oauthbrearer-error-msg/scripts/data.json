@@ -1,0 +1,39 @@
+{
+  "servers": [
+    {
+      "name": "server",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": "172.18.0.22"
+      },
+      "deploy":["../server/target/server.jar", "server.jar"]
+    },
+    {
+      "name": "inter",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": "172.18.0.23"
+      },
+      "deploy":["../intermediate/target/intermediate.jar", "intermediate.jar"]
+    }
+   ],
+  "tmpPrefix": "JBEAP-12415_oauthbrearer-error-msg",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh"],
+  "sleep": "3",
+  "execution": "docker"
+
+}
+
+
+

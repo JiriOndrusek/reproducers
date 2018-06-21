@@ -1,0 +1,10 @@
+/subsystem=elytron/token-realm=JWT:add(principal-claim=aud,jwt={})
+/subsystem=elytron/constant-role-mapper=users:add(roles=[users])
+/subsystem=elytron/constant-realm-mapper=JWT:add(realm-name=JWT)
+/subsystem=elytron/security-domain=ApplicationDomain:list-add(name=realms,value={realm=JWT,role-mapper=users,role-decoder=groups-to-roles})
+/subsystem=elytron/sasl-authentication-factory=application-sasl-authentication:undefine-attribute(name=mechanism-configurations)
+/subsystem=elytron/sasl-authentication-factory=application-sasl-authentication:write-attribute(name=mechanism-configurations,value=[{mechanism-name=OAUTHBEARER,realm-mapper=JWT}])
+/subsystem=ejb3/application-security-domain=other:add(security-domain=ApplicationDomain)
+/subsystem=remoting/http-connector=http-remoting-connector:undefine-attribute(name=security-realm)
+/subsystem=remoting/http-connector=http-remoting-connector:write-attribute(name=sasl-authentication-factory,value=application-sasl-authentication)
+reload
