@@ -1,0 +1,26 @@
+{
+  "servers": [
+    {
+      "name": "server",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone-full",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "$JAVA_OPTS -Dorg.jboss.byteman.transform.all -javaagent:/home/jondruse/dev/byteman/lib/byteman.jar=script:deletePage.btm,boot:/home/jondruse/dev/byteman/lib/byteman.jar,listener:true",
+        "ip": ""
+      },
+      "deploy":[]
+    }
+   ],
+  "tmpPrefix": "JBEAP-3848_deleting-page",
+  "users": [["add-user.sh -a -u", "user", "W3lcome!", "guest"]],
+  "builds": ["..", "mvn clean install -Prh"],
+  "sleep": "1",
+  "execution": "standalone"
+
+}
+
+
+

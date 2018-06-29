@@ -1,0 +1,13 @@
+/subsystem=messaging-activemq/server=default:write-attribute(name="security-enabled", value="false")
+/subsystem=messaging-activemq/server=default:write-attribute(name="transaction-timeout", value="120000")
+
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=redelivery-delay, value="0")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=max-delivery-attempts, value="200")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=max-size-bytes, value="2050")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=page-size-bytes, value="1050")
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=address-full-policy, value=PAGE)
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=redistribution-delay, value=0)
+
+jms-queue add --queue-address=TestQueue --entries=jms/queue/TestQueue,java:jboss/exported/jms/queue/TestQueue --durable=true
+
+reload
