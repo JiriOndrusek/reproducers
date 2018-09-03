@@ -1,0 +1,37 @@
+{
+  "servers": [
+    {
+      "name": "p18",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone-ha",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": "172.18.0.22"
+      },
+      "deploy":["../bin/clusterbench-ee7.ear", "clusterbench-ee7.ear"]
+    },
+    {
+      "name": "p19",
+      "configuration": {
+        "offset": 200,
+        "profile": "standalone-ha",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": "172.18.0.23"
+      },
+      "deploy":["../bin/clusterbench-ee7.ear", "clusterbench-ee7.ear"]
+    }
+   ],
+  "tmpPrefix": "JBEAP-10751_error-response",
+  "users": [["add-user.sh -a -u","joe", "joeIsAwesome2013!", "users"], ["add-user.sh -a -u","admin", "admin123+", ""], ["add-user.sh -a -u","ejb", "test", ""]],
+  "builds": ["..", "mvn clean install"],
+  "sleep": "1",
+  "execution": "standalonne"
+
+}
+
