@@ -1,3 +1,7 @@
+/subsystem=logging/logger=org.wildfly.transaction.client:add
+/subsystem=logging/logger=org.wildfly.transaction.client:write-attribute(name="level", value="TRACE")
+
+
 batch
 /subsystem=infinispan/cache-container=web/replicated-cache=repl:add
 /subsystem=infinispan/cache-container=web/replicated-cache=repl/store=file:add

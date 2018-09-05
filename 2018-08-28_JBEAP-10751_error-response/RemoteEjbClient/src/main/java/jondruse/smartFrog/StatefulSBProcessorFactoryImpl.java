@@ -161,10 +161,10 @@ public class StatefulSBProcessorFactoryImpl {
                 }
             } else {
                 if (writeDebugLog) {
-                    System.out.println("wildfly-config temporary file has not been created. Setting configuration path to /home/jondruse/git/projects/reproducers/2018-08-28_JBEAP-10751_error-response-Security-Exception/EjbClient/src/main/resources/wildfly-config"+port+".xml");
+//                    System.out.println("wildfly-config temporary file has not been created. Setting configuration path to /home/jondruse/git/projects/reproducers/2018-08-28_JBEAP-10751_error-response-Security-Exception/EjbClient/src/main/resources/wildfly-config"+port+".xml");
                 }
                 //lets assume that there is a custom wildfly-config.xml prepared
-                System.setProperty("wildfly.config.url", "/home/jondruse/git/projects/reproducers/2018-08-28_JBEAP-10751_error-response-Security-Exception/EjbClient/src/main/resources/wildfly-config"+port+".xml");
+                System.setProperty("wildfly.config.url", this.getClass().getResource("/wildfly-config.xml").getPath());
             }
 
             try {

@@ -18,7 +18,7 @@
     <jboss-ejb-client xmlns="urn:jboss:wildfly-client-ejb:3.0">
         <global-interceptors/>
         <connections>
-            <connection uri="remote+http://127.0.0.1:8180"/>
+            <connection uri="remote+http://127.0.0.1:8380"/>
         </connections>
     </jboss-ejb-client>
 </configuration>

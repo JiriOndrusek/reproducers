@@ -25,6 +25,19 @@
         "ip": "172.18.0.23"
       },
       "deploy":["../bin/clusterbench-ee7.ear", "clusterbench-ee7.ear"]
+    },
+    {
+      "name": "p20",
+      "configuration": {
+        "offset": 300,
+        "profile": "standalone-ha",
+        "debugPort": 8989,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": "172.18.0.24"
+      },
+      "deploy":["../bin/clusterbench-ee7-forw.ear", "clusterbench-ee7.ear"]
     }
    ],
   "tmpPrefix": "JBEAP-10751_error-response",

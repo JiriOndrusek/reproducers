@@ -1,0 +1,58 @@
+/subsystem=logging/logger=org.wildfly.transaction.client:add
+/subsystem=logging/logger=org.wildfly.transaction.client:write-attribute(name="level", value="TRACE")
+
+/core-service=management/security-realm=ejb-security-realm:add
+/core-service=management/security-realm=ejb-security-realm/server-identity=secret:add(value="dGVzdA==")
+
+/subsystem=elytron/authentication-configuration=admin-cfg:add(authentication-name="admin", realm="ApplicationRealm", sasl-mechanism-selector="DIGEST-MD5")
+/subsystem=elytron/authentication-configuration=admin-cfg:write-attribute(name=credential-reference, value={clear-text="admin123+"})
+/subsystem=elytron/authentication-context=admin-ctx:add
+/subsystem=elytron/authentication-context=admin-ctx:write-attribute(name=match-rules, value=[{authentication-configuration=admin-cfg}])
+
+batch
+/subsystem=infinispan/cache-container=web/replicated-cache=repl:add
+/subsystem=infinispan/cache-container=web/replicated-cache=repl/store=file:add
+/subsystem=infinispan/cache-container=web/replicated-cache=repl/component=locking:add(isolation=REPEATABLE_READ)
+/subsystem=infinispan/cache-container=web/replicated-cache=repl/component=transaction:add(mode=BATCH)
+run-batch
+
+/subsystem=infinispan/cache-container=web/distributed-cache=dist:write-attribute(name=owners,value=2)
+
+batch
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl:add
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl/store=file:add
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl/component=locking:add(isolation=REPEATABLE_READ)
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl/component=transaction:add(mode=BATCH)
+run-batch
+/subsystem=infinispan/cache-container=ejb/distributed-cache=dist:write-attribute(name=owners,value=2)
+/subsystem=infinispan/cache-container=ejb:write-attribute(name=default-cache, value=repl)
+
+
+
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-ejb:add(host=127.0.0.1, port=8180)
+
+
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection:add(outbound-socket-binding-ref=remote-ejb,authentication-context=admin-ctx)
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection/property=org.xnio.Options.SASL_POLICY_NOANONYMOUS:add
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection/property=org.xnio.Options.SASL_POLICY_NOANONYMOUS:write-attribute(name="value", value="false")
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection/property=org.xnio.Options.SSL_ENABLED:add
+/subsystem=remoting/remote-outbound-connection=remote-ejb-connection/property=org.xnio.Options.SSL_ENABLED:write-attribute(name="value", value="false")
+
+
+/socket-binding-group=standard-sockets/socket-binding=jgroups-mping:write-attribute(name=multicast-address, value=230.10.0.4)
+/socket-binding-group=standard-sockets/socket-binding=jgroups-udp:write-attribute(name=multicast-address, value=230.10.0.4)
+/socket-binding-group=standard-sockets/socket-binding=modcluster:write-attribute(name=multicast-address, value=230.10.0.4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+reload
