@@ -1,0 +1,14 @@
+# change remoting
+/core-service=management/security-realm=ApplicationRealm/authentication=local:remove
+/core-service=management/security-realm=ApplicationRealm/authentication=properties:remove
+/core-service=management/security-realm=ApplicationRealm/authentication=jaas:add(name=jmx-console)
+
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_MECHANISMS:add
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_MECHANISMS:write-attribute(name="value", value="ANONYMOUS,PLAIN")
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_POLICY_NOANONYMOUS:add
+/subsystem=remoting/http-connector=http-remoting-connector/property=SASL_POLICY_NOANONYMOUS:write-attribute(name="value", value="false")
+
+/subsystem=security/security-domain=jmx-console:add(cache-type=default)
+/subsystem=security/security-domain=jmx-console/authentication=classic:add(login-modules=[{"code"=>"UsersRoles","flag"=>"required","module-options"=>[("usersProperties"=>"file:///${jboss.server.config.dir}/users.properties"),("rolesProperties"=>"file:///${jboss.server.config.dir}/roles.properties")]}])
+
+reload

@@ -1,0 +1,32 @@
+{
+  "servers": [
+    {
+      "name": "server",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":["../server/target/WFCORE-4076_order-of-sasl-mechanisms-server-1.0.0-SNAPSHOT.jar", "server.jar"]
+    }, {
+      "name": "reverse",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "javaOpts": ""
+      },
+      "deploy":["../server/target/WFCORE-4076_order-of-sasl-mechanisms-server-1.0.0-SNAPSHOT.jar", "server.jar"]
+    }
+   ],
+  "tmpPrefix": "WFCORE-4076_order-of-sasl-mechanisms",
+  "users": [["add-user.sh -a","admin", "admin", "guest1"]],
+  "builds": ["..", "mvn clean install -DskipTests -Prh"],
+  "sleep": "5",
+  "execution": "standalonne"
+}
+
+

@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>jondruse_reproducers</groupId>
+        <artifactId>WFCORE-4076_order-of-sasl-mechanisms</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>WFCORE-4076_order-of-sasl-mechanisms-client</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency> <!-- this is ejb client from EAP 7.1.0 -->
+                <groupId>org.jboss.eap</groupId>
+                <artifactId>wildfly-ejb-client-bom</artifactId>
+                <version>7.1.0.GA-redhat-11</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.wildfly.wildfly-http-client</groupId>
+            <artifactId>wildfly-http-ejb-client</artifactId>
+            <version>1.0.9.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jondruse_reproducers</groupId>
+            <artifactId>JBEAP-14647_anonymous-ejb-server-side</artifactId>
+            <version>${project.version}</version>
+            <type>ejb-client</type>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.quickstarts.eap</groupId>
+            <artifactId>jboss-ejb-remote-server-side</artifactId>
+            <type>ejb-client</type>
+            <version>6.4.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jondruse_reproducers</groupId>
+            <artifactId>WFCORE-4076_order-of-sasl-mechanisms-server</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Add the maven exec plug-in to allow us to run a java program
+                via maven -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <executable>java</executable>
+                    <workingDirectory>${project.build.directory}/exec-working-directory</workingDirectory>
+                    <arguments>
+                        <argument>-classpath</argument>
+                        <classpath></classpath>
+                        <argument>jondruse.HelloClientTest</argument>
+                    </arguments>
+                    <!--<detail>true</detail>-->
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
