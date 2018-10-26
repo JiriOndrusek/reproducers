@@ -1,0 +1,37 @@
+{
+  "servers": [
+    {
+      "name": "s01",
+      "configuration": {
+        "offset": 0,
+        "profile": "standalone",
+        "debugPort": 8787,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": ""
+      },
+      "deploy":["../s01/target/s01.war", "s01.war"]
+    },
+    {
+      "name": "s02",
+      "configuration": {
+        "offset": 100,
+        "profile": "standalone",
+        "debugPort": 8888,
+        "debugSuspend": "n",
+        "version": "7",
+        "javaOpts": "",
+        "ip": ""
+      },
+      "deploy":["../s02/target/s02.war", "s02.war"]
+    }
+   ],
+  "tmpPrefix": "2018-10-26_JBEAP-13730_EJB-no-security-perission-exception",
+  "users": [],
+  "builds": ["..", "mvn clean install -Prh -DskipTest=true"],
+  "sleep": "1",
+  "execution": "standalone"
+}
+
+

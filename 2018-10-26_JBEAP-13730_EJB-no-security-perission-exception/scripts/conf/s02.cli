@@ -1,0 +1,4 @@
+/subsystem=remoting/http-connector=http-remoting-connector:undefine-attribute(name=security-realm)
+
+
+reload

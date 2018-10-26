@@ -1,0 +1,4 @@
+/socket-binding-group=standard-sockets/remote-destination-outbound-socket-binding=remote-to-s02:add(host=127.0.0.1, port=8180)
+/subsystem=remoting/remote-outbound-connection=connection-to-s02:add(outbound-socket-binding-ref=remote-to-s02)
+
+reload
