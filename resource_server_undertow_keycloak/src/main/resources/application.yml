@@ -1,0 +1,21 @@
+server:
+  port: 8084
+
+logging:
+  level:
+    root: DEBUG
+
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8180/auth/realms/public-library/protocol/openid-connect/certs
+      provider:
+        keycloak:
+          authorization-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/auth
+          token-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/token
+          user-info-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/userinfo
+          jwk-set-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/certs
+          user-name-attribute: preferred_username

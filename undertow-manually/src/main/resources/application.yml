@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+logging:
+  level:
+    root: DEBUG
+
+
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: demoapp
+            client-secret: demoapp
+            clientName: Keycloak
+            authorization-grant-type: authorization_code
+            redirectUriTemplate: '{baseUrl}/login/oauth2/code/{registrationId}'
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          keycloak:
+            authorization-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/auth
+            token-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/token
+            user-info-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/userinfo
+            jwk-set-uri: http://localhost:8001/auth/realms/demo/protocol/openid-connect/certs
+            user-name-attribute: preferred_username
