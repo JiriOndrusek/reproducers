@@ -37,14 +37,14 @@ if ((m = version =~/(\d+)\.(\d+)\..*/)) {
 
     //version 7.x has tag of image 1:x
     String fuseImage = 'fuse-java-openshift:1.' + secondVersion
-    String fuseImageRepository = 'registry.redhat.io/fuse' + firstVersion + '/' + fuseImage
+    String fuseImageRepository = 'registry.redhat.io/fuse1' + '/' + fuseImage
     String name = pme.getProject().getModel().getName();
     println("For quickstart '" + name + "' replace version for import-image or documentation to version " + firstVersion + '.' + secondVersion)
 
     String fileName = "README.adoc"
     new File(fileName + ".bak").withWriter { w ->
         new File(fileName).eachLine { line ->
-            w << line.replaceAll('oc import-image .*', 'oc import image ' + fuseImage + '\\w?--from=' + fuseImageRepository + ' --confirm')
+            w << line.replaceAll('oc import-image .*', 'oc import image ' + fuseImage + ' --from=' + fuseImageRepository + ' --confirm')
                     .replaceAll('red_hat_fuse/\\d+.\\d+/html/fuse_on_openshift_guide', 'red_hat_fuse/' + firstVersion + '.' + secondVersion + '/html/fuse_on_openshift_guide') 
 		    .replaceAll('mvn clean -DskipTests fabric8:deploy -Popenshift -Dfabric8.generator.fromMode=istag -Dfabric8.generator.from=MY_PROJECT_NAME/fuse-java-openshift:2.0', 
 				'mvn clean -DskipTests fabric8:deploy -Popenshift -Dfabric8.generator.fromMode=istag -Dfabric8.generator.from=MY_PROJECT_NAME/' + fuseImage) + System.getProperty("line.separator")
