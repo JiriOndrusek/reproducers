@@ -37,7 +37,7 @@ if ((m = version =~/(\d+)\.(\d+)\..*/)) {
 
     //version 7.x has tag of image 1:x
     String fuseImage = 'fuse-java-openshift:1.' + secondVersion
-    String fuseImageRepository = 'registry.redhat.io/fuse1' + '/' + fuseImage
+    ing fuseImageRepository = 'registry.redhat.io/fuse' + firstVersion + '/' + fuseImage
     String name = pme.getProject().getModel().getName();
     println("For quickstart '" + name + "' replace version for import-image or documentation to version " + firstVersion + '.' + secondVersion)
 
