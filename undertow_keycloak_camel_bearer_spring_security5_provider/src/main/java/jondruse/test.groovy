@@ -45,9 +45,9 @@ if ((m = version =~/(\d+)\.(\d+)\..*/)) {
     new File(fileName + ".bak").withWriter { w ->
         new File(fileName).eachLine { line ->
             w << line.replaceAll('oc import-image .*', 'oc import image ' + fuseImage + ' --from=' + fuseImageRepository + ' --confirm')
-                    .replaceAll('red_hat_fuse/\\d+.\\d+/html/fuse_on_openshift_guide', 'red_hat_fuse/' + firstVersion + '.' + secondVersion + '/html/fuse_on_openshift_guide') + System.getProperty("line.separator")
+                    .replaceAll('red_hat_fuse/\\d+.\\d+/html/fuse_on_openshift_guide', 'red_hat_fuse/' + firstVersion + '.' + secondVersion + '/html/fuse_on_openshift_guide') 
 		    .replaceAll('mvn clean -DskipTests fabric8:deploy -Popenshift -Dfabric8.generator.fromMode=istag -Dfabric8.generator.from=MY_PROJECT_NAME/fuse-java-openshift:2.0', 
-				'mvn clean -DskipTests fabric8:deploy -Popenshift -Dfabric8.generator.fromMode=istag -Dfabric8.generator.from=MY_PROJECT_NAME/' + fuseImage)
+				'mvn clean -DskipTests fabric8:deploy -Popenshift -Dfabric8.generator.fromMode=istag -Dfabric8.generator.from=MY_PROJECT_NAME/' + fuseImage) + System.getProperty("line.separator")
         }
     }
     Files.copy(Paths.get(fileName + ".bak"), Paths.get(fileName), StandardCopyOption.REPLACE_EXISTING)
