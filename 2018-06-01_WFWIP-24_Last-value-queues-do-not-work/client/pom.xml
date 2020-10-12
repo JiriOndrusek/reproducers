@@ -72,7 +72,7 @@
         <arquillian.eap5x.container.version>1.0.0.CR3</arquillian.eap5x.container.version>
         <version.byteman>3.0.5</version.byteman>
         <version.commons-io>2.4</version.commons-io>
-        <version.junit>4.11</version.junit>
+        <version.junit>4.13.1</version.junit>
         <version.log4j>1.2.16</version.log4j>
         <version.jnp-client>5.0.5.Final</version.jnp-client>
         <version.org.apache.maven.enforcer-plugin>3.0.0-M1</version.org.apache.maven.enforcer-plugin>
