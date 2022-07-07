@@ -78,7 +78,7 @@
         <version.org.apache.maven.enforcer-plugin>3.0.0-M1</version.org.apache.maven.enforcer-plugin>
         <version.org.jacoco>0.7.9</version.org.jacoco>
         <version.org.jacoco.plugin>0.7.9</version.org.jacoco.plugin>
-        <xalan.version>2.7.0</xalan.version>
+        <xalan.version>2.7.2</xalan.version>
         <surefire-version>2.19.1</surefire-version>
         <qa.resource.monitor.version>0.0.6-SNAPSHOT</qa.resource.monitor.version>
         <titlesTemplate>${project.basedir}/chapters_naming</titlesTemplate>
